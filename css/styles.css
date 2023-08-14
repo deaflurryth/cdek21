@@ -12,9 +12,10 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fafafa;
+  background-color: rgba(250, 250, 250, 0.67);
   padding: 20px 50px 10px 50px;
   box-sizing: border-box;
+  backdrop-filter: blur(10px);
 }
 header {
   position: fixed;
@@ -39,11 +40,14 @@ h2 {
   height: 50px;
   cursor: pointer;
 }
-.logo {
+.logo img {
   transition: transform 0.5s ease-in-out;
 }
-.logo:active{
-  transform: scale(1.5);
+.logo img:hover{
+  transform: scale(1.2);
+}
+.logo img:active{
+  transform: scale(1.6);
 }
 
 nav {
@@ -60,6 +64,7 @@ nav ul {
 nav li {
   margin: 0 15px;
   position: relative;
+  transition: transform 0.3s ease-in-out;
 }
 
 nav a {
@@ -85,7 +90,17 @@ nav a::before {
 nav a:hover::before {
   transform: scaleX(1);
 }
+nav li:active {
+  transform: scaleX(1.2);
+}
 
+
+footer {
+  width: 100%;
+  height: 300px;
+  background: -webkit-linear-gradient(#00B33D, #333);
+  border-radius: 50px 50px 0px 0px;
+}
 
 .hidden-menu {
   opacity: 0;
@@ -435,7 +450,7 @@ button:active .button_top {
   align-content: flex-start;
   justify-content: flex-start;
   align-items: flex-start;
-  color: #000;
+  color: #323232;
   margin-top: 80px;
 }
 .step-text-info {
@@ -484,18 +499,29 @@ button:active .step_recall_button_s {
   transform: translateY(0);
 }
 
+.tarif_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+}
+
 .grid-container_t {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(13, 1fr);
+    grid-template-rows: repeat(13, 80px);
     gap: 20px; /* Пространство между ячейками */
     /*height: 500px; !* Высота блока *!*/
     /*border: 1px solid #000;*/
     padding: 10px;
+    margin-top: 50px;
   }
 
 .grid-item_t {
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-radius: 10px;
   padding: 5px;
   text-align: center;
   align-items: center;
@@ -503,22 +529,84 @@ button:active .step_recall_button_s {
   align-content: center;
   justify-content: center;
 }
+.grid_title_header {
+  font-family: "Oswald", sans-serif;
+  font-size: 18pt;
+  font-weight: 600;
+  color: #323232;
+}
+.grid_title_header_sub {
+  background-color: #00B33D;
+  font-family: "Oswald", sans-serif;
+  font-size: 18pt;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+.grid_item_text {
+  font-family: "Oswald", sans-serif;
+  font-size: 15pt;
+  font-weight: 300;
+  color: #323232;
+}
 .none_circle {
   color: #323232;
-  background-color: rgba(61, 61, 61, 0.5);
+  background: linear-gradient(#b4b4b4, #6e6e6e);
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  box-shadow: 0 0 2px 10px rgba(61, 61, 61, 0.1);
+  width: 16px;
+  height: 16px;
+  box-shadow: 0 0px 2px 8px rgba(61, 61, 61, 0.1);
 }
 .yes_circle {
   color: #00B33D;
-  background-color: rgba(0, 179, 61, 0.56);
+  background: linear-gradient(180deg, #0cf35b 0%, #00B33D 100%);
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  box-shadow: 0 0 2px 10px rgba(89, 143, 107, 0.42);
+  width: 16px;
+  height: 16px;
+  /*box-shadow: 0 0px 2px 8px rgb(7, 176, 65, 0.2);*/
+  animation: pulse__grid 2s infinite;
 }
+
+.recallme_button_grid_d {
+  margin-top: 40px;
+  --button_radius: 0.65em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #00B33D;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  padding: 0.1em 0.2em;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  cursor: pointer;
+}
+.button_top_grid {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.70em 0.9em;
+  background: var(--button_color);
+  color: #323232;
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top_grid {
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top_grid {
+  transform: translateY(0);
+}
+.stages_h2_title {
+  font-family: "Oswald", sans-serif;
+  font-size: 12pt;
+  font-weight: 200;
+  color: #323232;
+}
+
+
 
 .about-comp_wrapper{
   padding: 50px;
@@ -635,7 +723,55 @@ button:active .step_recall_button_s {
   /*padding-top: 20px;*/
   padding: 10px 10px 0 10px;
 }
+.why_us_section {
+  margin-top: 100px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.content-grid-block-downst {
+  padding: 50px 0px 0px 0px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 1300px;
+  height: 440px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
 
+.grid-item-wh {
+  /*border: 2px dashed #00B33D;*/
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  cursor: default;
+  transition: transform 0.2s;
+}
+.grid-item-wh:hover {
+  transform: scale(1.1);
+  animation: pulse__grid_d 1.5s linear infinite;
+}
+@keyframes pulse__grid_d {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 179, 61, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px 20px rgba(0, 179, 61, 0.1);
+  }
+  100% {
+    box-shadow: 0 5px 1px rgba(0, 179, 61, 0.4);
+  }
+}
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 768px) {
