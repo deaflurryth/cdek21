@@ -4,19 +4,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const steps = document.querySelectorAll(".step");
-  const line = document.querySelector(".line");
-  const container = document.querySelector(".stages_wrapper");
-  const stepHeight = steps[0].offsetHeight + 130; // Учтем расстояние между кружками
+    const steps = document.querySelectorAll(".step");
+    const line = document.querySelector(".line");
+    const container = document.querySelector(".stages_wrapper");
+    const stepHeight = steps[0].offsetHeight + 60; // Учтем расстояние между кружками
 
-  const totalHeight = container.scrollHeight - window.innerHeight;
-  const maxScrollPosition = totalHeight - stepHeight;
+    const totalHeight = container.scrollHeight - window.innerHeight;
+    const maxScrollPosition = totalHeight - stepHeight;
 
-  let scrollTimeout; // Для управления задержкой
+    let scrollTimeout; // Для управления задержкой
 
-  document.addEventListener("scroll", function () {
-    let scrollPosition = window.scrollY - container.offsetTop;
-    scrollPosition = Math.min(Math.max(scrollPosition, 0), maxScrollPosition);
+    document.addEventListener("scroll", function () {
+        let scrollPosition = window.scrollY - container.offsetTop;
+        scrollPosition = Math.min(Math.max(scrollPosition, 0), maxScrollPosition);
 
     const scrollPercentage = (scrollPosition / maxScrollPosition) * 100;
     line.style.height = scrollPercentage + "%";
