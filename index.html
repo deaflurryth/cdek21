@@ -38,6 +38,36 @@
     </div>
   </header>
 
+
+ <div id="popup1" class="overlay">
+  <div class="popup">
+    <a class="close" href="#">&times;</a>
+    <div class="container">
+      <div class="card">
+        <div class="card-image">
+          <h2 class="card-heading">
+            Заказать звонок
+          </h2>
+        </div>
+        <form class="call-form">
+          <div class="input">
+            <input type="text" class="input-field" required />
+            <label class="input-label">Как к вам обращаться?</label>
+          </div>
+          <div class="input">
+            <input type="text" class="input-field" required />
+            <label class="input-label">Ваш email</label>
+          </div>
+          <div class="action">
+            <button class="action-button">Отправить</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
   <div class="content-wrapper">
 
     <div class="content-banner">
@@ -55,12 +85,12 @@
             <p class="banner_text_content">Заключите удаленно договор со СДЭК быстро и бесплатно!
                 <br>Специальные условия для юридических лиц, ИП.</p>
             <div class="button_field">
-                <button class="recallme_button">
+                <a class="recallme_button" href="#popup1">
                     <span class="button_top">ЗАКАЗАТЬ ЗВОНОК</span>
-                </button>
-            <button class="feedback_button">
-                <span class="button_top">ОСТАВИТЬ ЗАЯВКУ</span>
-            </button>
+                </a>
+            <a class="feedback_button">
+                <span class="button_top" href="#popup2">ОСТАВИТЬ ЗАЯВКУ</span>
+            </a>
             </div>
         </div>
         <div class="right-content-banner">
