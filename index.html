@@ -20,17 +20,18 @@
         </div>
         <nav>
           <ul class="main-menu">
-            <li><a href="#calculator_wrapper">Калькулятор</a></li>
-            <li><a href="#">Тарифы</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">О компании</a></li>
+              <li><a href="#calculator">Калькулятор</a></li>
+              <li><a href="#tarif">Тарифы</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+              <li><a href="#about_us">О компании</a></li>
           </ul>
-          <ul class="hidden-menu">
-            <li><a href="#">Заключить договор</a></li>
-            <li><a href="#">Почему нам доверяют</a></li>
-            <li><a href="#">Наши партнеры</a></li>
-            <li><a href="#">Политика обработки данных</a></li>
-          </ul>
+            <ul class="hidden-menu">
+                <li><a href="#dogovor">Заключить договор</a></li>
+                <li><a href="#doverie">Почему нам доверяют</a></li>
+                <li><a href="#partners">Наши партнеры</a></li>
+                <li><a href="https://cdek21vek.ru/personal-data-policy/" target="_blank">Политика обработки данных</a>
+                </li>
+            </ul>
         </nav>
         <div class="menu-icon">
           <img src="images/menu_icon.svg" alt="Menu Icon">
@@ -88,9 +89,9 @@
                 <a class="recallme_button" href="#popup1">
                     <span class="button_top">ЗАКАЗАТЬ ЗВОНОК</span>
                 </a>
-            <a class="feedback_button">
-                <span class="button_top" href="#popup2">ОСТАВИТЬ ЗАЯВКУ</span>
-            </a>
+                <a class="feedback_button" style="text-decoration: none">
+                    <span class="button_top" href="#popup2" style="text-decoration: none">ОСТАВИТЬ ЗАЯВКУ</span>
+                </a>
             </div>
         </div>
         <div class="right-content-banner">
@@ -144,24 +145,25 @@
         </div>
     </div>
 
-    <div class="stages_wrapper">
-        <div class="stages_title">
-            <h1>Как происходит подписание договора?</h1>
-            <h2 class="stages_h2_title">Мы не работаем по «конвейерной системе» и против работы для галочки. <br>
-                Мы стремимся к сотрудничеству, которое <span style="color: #00B33D">помогает каждому</span>, используем все ресурсы для развития наших партнеров.<br>
-            Мы подготовим договор для Вас в <span style="color: #00B33D">течении часа. </span></h2>
-        </div>
-       <div class="progress-container">
-            <div class="line"></div>
-            <div class="step active_step">
-                <span class="step-label">Заявка</span>
+      <div class="stages_wrapper" id="dogovor">
+          <div class="stages_title">
+              <h1>Как происходит подписание договора?</h1>
+              <h2 class="stages_h2_title">Мы не работаем по «конвейерной системе» и против работы для галочки. <br>
+                  Мы стремимся к сотрудничеству, которое <span style="color: #00B33D">помогает каждому</span>,
+                  используем все ресурсы для развития наших партнеров.<br>
+                  Мы подготовим договор для Вас в <span style="color: #00B33D">течении часа. </span></h2>
+          </div>
+          <div class="progress-container">
+              <div class="line"></div>
+              <div class="step active_step">
+                  <span class="step-label">Заявка</span>
                 <span class="step-number">1</span>
                 <div class="step-text-block" style="margin-top: 0px;">
                     <p class="step-text-info">Звоните нам
                     <br>
                     <span style="color: #00B33D">+7 (926) 607-1482</span><span style="padding-left: 20px; padding-right: 20px;"> ИЛИ</span>
                     <button class="step_recall_button">
-                    <span class="step_recall_button_s">Заполнить форму</span>
+                        <span class="step_recall_button_s">Заполнить форму</span>
                     </button></p>
                 </div>
             </div>
@@ -208,24 +210,24 @@
 <!--        </div>-->
 
     </div>
-    <div class="calculator_wrapper">
-      <div class="stages_title">
-            <h1>Калькулятор</h1>
-            <h2 class="stages_h2_title">Расчет стоимости услуг доставки по договору для Интернет Магазина</h2>
-        </div>
+      <div class="calculator_wrapper" id="calculator">
+          <div class="stages_title">
+              <h1>Калькулятор</h1>
+              <h2 class="stages_h2_title">Расчет стоимости услуг доставки по договору для Интернет Магазина</h2>
+          </div>
 
-    </div>
-    <div class="tarif_wrapper">
-        <div class="stages_title">
-            <h1>Тарифы СДЭК</h1>
-            <h2 class="stages_h2_title">Сдэк — заключите договор, чтобы получить лучшие цены</h2>
-        </div>
-        <div class="grid-container_t">
-            <div class="grid-item_t grid_title_header">ХАРАКТЕРИСТИКИ:</div>
-            <div class="grid-item_t grid_title_header">БЕЗ ДОГОВОРА</div>
-            <div class="grid-item_t grid_title_header">ДОГОВОР ДОСТАВКИ</div>
-            <div class="grid-item_t grid_title_header_sub">ДОГОВОР ДЛЯ ИНТЕРНЕТ-МАГАЗИНОВ</div>
-            <div class="grid-item_t grid_item_text">Тариф «Посылка»</div>
+      </div>
+      <div class="tarif_wrapper" id="tarif">
+          <div class="stages_title">
+              <h1>Тарифы СДЭК</h1>
+              <h2 class="stages_h2_title">Сдэк — заключите договор, чтобы получить лучшие цены</h2>
+          </div>
+          <div class="grid-container_t">
+              <div class="grid-item_t grid_title_header">ХАРАКТЕРИСТИКИ:</div>
+              <div class="grid-item_t grid_title_header">БЕЗ ДОГОВОРА</div>
+              <div class="grid-item_t grid_title_header">ДОГОВОР ДОСТАВКИ</div>
+              <div class="grid-item_t grid_title_header_sub">ДОГОВОР ДЛЯ ИНТЕРНЕТ-МАГАЗИНОВ</div>
+              <div class="grid-item_t grid_item_text">Тариф «Посылка»</div>
             <div class="grid-item_t"><div class="none_circle"></div></div>
             <div class="grid-item_t"><div class="none_circle"></div></div>
             <div class="grid-item_t"><div class="yes_circle"></div></div>
@@ -268,34 +270,50 @@
             <div class="grid-item_t grid_item_text">Страхование</div>
             <div class="grid-item_t"><div class="yes_circle"></div></div>
             <div class="grid-item_t"><div class="yes_circle"></div></div>
-            <div class="grid-item_t"><div class="yes_circle"></div></div>
-            <div class="grid-item_t grid_item_text">SMS-оповещение</div>
-            <div class="grid-item_t"><div class="yes_circle"></div></div>
-            <div class="grid-item_t"><div class="yes_circle"></div></div>
-            <div class="grid-item_t"><div class="yes_circle"></div></div>
-            <div class="grid-item_t grid_item_text">Дополнительный сбор 20% при оплате получателем</div>
-            <div class="grid-item_t"><div class="yes_circle"></div></div>
-            <div class="grid-item_t"><div class="none_circle"></div></div>
-            <div class="grid-item_t"><div class="none_circle"></div></div>
-        </div>
-        <div class="sub__title">
-            <h3 class="stages_h2_title">*(примерка, осмотр вложения, частичная доставка, возврат не выкупленных товаров, бесплатное хранение 14 дней на ПВЗ и т.д.)</h3>
-        </div>
-        <button class="recallme_button_grid_d">
-                <span class="button_top_grid">ЗАКЛЮЧИТЬ ДОГОВОР</span>
-        </button>
-    </div>
-    <div class="about-comp_wrapper">
-        <div class="about-comp-container">
-            <h2 class="about-comp-title">Выгодные условия работы для юридических лиц, индивидуальных предпринимателей и самозанятых.</h2>
+              <div class="grid-item_t">
+                  <div class="yes_circle"></div>
+              </div>
+              <div class="grid-item_t grid_item_text">SMS-оповещение</div>
+              <div class="grid-item_t">
+                  <div class="yes_circle"></div>
+              </div>
+              <div class="grid-item_t">
+                  <div class="yes_circle"></div>
+              </div>
+              <div class="grid-item_t">
+                  <div class="yes_circle"></div>
+              </div>
+              <div class="grid-item_t grid_item_text">Дополнительный сбор 20% при оплате получателем</div>
+              <div class="grid-item_t">
+                  <div class="yes_circle"></div>
+              </div>
+              <div class="grid-item_t">
+                  <div class="none_circle"></div>
+              </div>
+              <div class="grid-item_t">
+                  <div class="none_circle"></div>
+              </div>
+          </div>
+          <div class="sub__title" style="font-size: 16pt;">
+              <h3 class="stages_h2_title" style="font-size: 16pt !important;">*(примерка, осмотр вложения, частичная
+                  доставка, возврат не выкупленных товаров, бесплатное хранение 14 дней на ПВЗ и т.д.)</h3>
+          </div>
+          <button class="recallme_button_grid_d">
+              <span class="button_top_grid">ЗАКЛЮЧИТЬ ДОГОВОР</span>
+          </button>
+      </div>
+      <div class="about-comp_wrapper" id="about_us">
+          <div class="about-comp-container">
+              <h2 class="about-comp-title">Выгодные условия работы для юридических лиц, индивидуальных предпринимателей
+                  и самозанятых.</h2>
 
-            <div class="about-comp-content">
+              <div class="about-comp-content">
 
 
-                <div class="about-comp-cards-left">
+                  <div class="about-comp-cards-left">
 
-                    <div class="about-comp-card-txt">
-                        <div class="center-input-cards">
+                      <div class="about-comp-card-txt">
+                          <div class="center-input-cards">
                             <div class="int-about-card">2000</div>
                             <div class="txt-about-card">год основания компании</div>
                         </div>
@@ -333,17 +351,17 @@
             </div>
 
         </div>
-        <div class="why_us_section">
-            <div class="stages_title">
-                <h1>Почему нам доверяют</h1>
-            </div>
-            <div class="content-grid-block-downst">
-                <div class="grid-item-wh">
-                    <i class="fas fa-hand-holding-usd green-icon why_us_d" style="font-size: 45px;"></i>
-                    <h1 class="content-grid-h1">Выкупаемость до 95% заказов.<br> &nbsp;</h1>
-                </div>
-                <div class="grid-item-wh">
-                    <i class="fas fa-shipping-fast green-icon " style="font-size: 45px;"></i>
+          <div class="why_us_section" id="doverie">
+              <div class="stages_title">
+                  <h1>Почему нам доверяют</h1>
+              </div>
+              <div class="content-grid-block-downst">
+                  <div class="grid-item-wh">
+                      <i class="fas fa-hand-holding-usd green-icon why_us_d" style="font-size: 45px;"></i>
+                      <h1 class="content-grid-h1">Выкупаемость до 95% заказов.<br> &nbsp;</h1>
+                  </div>
+                  <div class="grid-item-wh">
+                      <i class="fas fa-shipping-fast green-icon " style="font-size: 45px;"></i>
                     <h1 class="content-grid-h1">Доставка по России от 135 рублей и 2 дней.</h1>
                 </div>
                 <div class="grid-item-wh">
@@ -354,84 +372,67 @@
                     <i class="fas fa-undo green-icon" style="font-size: 45px;"></i>
                     <h1 class="content-grid-h1">Возможность возврата: полного или частичного.</h1>
                 </div>
-                <div class="grid-item-wh">
-                    <i class="fas fa-wallet green-icon" style="font-size: 45px;"></i>
-                    <h1 class="content-grid-h1">Прием платежей любым удобным вам способом.</h1>
-                </div>
-                <div class="grid-item-wh">
-                    <i class="fas fa-headset green-icon" style="font-size: 45px;"></i>
-                    <h1 class="content-grid-h1">Бесплатная интеграция. Поддержка 24/7.</h1>
-                </div>
-            </div>
-        </div>
+                  <div class="grid-item-wh">
+                      <i class="fas fa-wallet green-icon" style="font-size: 45px;"></i>
+                      <h1 class="content-grid-h1">Прием платежей любым удобным вам способом.</h1>
+                  </div>
+                  <div class="grid-item-wh">
+                      <i class="fas fa-headset green-icon" style="font-size: 45px;"></i>
+                      <h1 class="content-grid-h1">Бесплатная интеграция. Поддержка 24/7.</h1>
+                  </div>
+              </div>
+          </div>
+          <div class="slider_main_wrap" id="partners">
+              <div class="stages_title" style="margin-bottom: 100px;">
+                  <h1>Наши партнеры</h1>
+              </div>
+              <div class="slider_wrap">
+                  <i id="left" class="fa-solid fa-angle-left" style="color: #00B33D;"></i>
+                  <div class="carousel">
+                      <img src="images/Avito_logopng.png" alt="img" draggable="false">
+                      <img src="images/image-from-rawpixel-id-6247628-original.png" alt="img" draggable="false">
+                      <img src="images/kupivip_logo.png" alt="img" draggable="false">
+                      <img src="images/Leroy_Merlin.png" alt="img" draggable="false">
+                      <img src="images/logo-lamoda.png" alt="img" draggable="false">
+                      <img src="images/poizon_logo.jpg" alt="img" draggable="false">
+                      <img src="images/soccershop.png" alt="img" draggable="false">
+                      <img src="images/sport-master.png" alt="img" draggable="false">
+                      <img src="images/sticksmoker_logo.png" alt="img" draggable="false">
+                  </div>
+                  <i id="right" class="fa-solid fa-angle-right" style="color: #00B33D;"></i>
+              </div>
+          </div>
 
-        <div class="slider_wrap">
-            <div class="stages_title">
-                <h1>Наши партнеры</h1>
-                <h2 class="stages_h2_title">Мы оказываем людям и компаниям спектр услуг своевременной и гарантированной
-                    доставки, постоянно повышая уровень сервиса, внедряя
-                    <br>новые технологии, эффективно используя внутренний потенциал и внешние ресурсы.</h2>
-            </div>
-            <div class="slider">
-                <div class="slider-content">
-                    <img src="images/Leroy_Merlin.png">
-                    <img src="images/Avito_logopng.png">
-                    <img src="images/logo-lamoda.png">
-                    <img src="images/poizon_logo.jpg">
-                    <img src="images/kupivip_logo.png">
-                    <img src="images/top_shop_logo.png">
-                    <img src="images/image-from-rawpixel-id-6247628-original.png">
-                    <img src="images/soccershop.png">
-                    <img src="images/sticksmoker_logo.png">
-                </div>
-                <button class="prev-button">&#10094;</button>
-                <button class="next-button">&#10095;</button>
-            </div>
-        </div>
-        <div class="down_info_wrapper">
-            <h1>Где мы находимся</h1>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.9660171866008!2d37.562091977285654!3d55.79382798882993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b549ee794cef41%3A0x40ba627aba2bacef!2z0YPQuy4g0JLQtdGA0YXQvdGP0Y8g0JzQsNGB0LvQvtCy0LrQsCwgMTTRgTIsINCc0L7RgdC60LLQsCwgMTI3MDgz!5e0!3m2!1sru!2sru!4v1692211496709!5m2!1sru!2sru"
-                    width="800" height="350" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+
+          <div class="down_info_wrapper" id="contacts"
+               style="border: 2px dashed #00B33D; margin-bottom: -60px;  border-radius: 50px 50px 0px 0px;">
+              <h1>Где мы находимся</h1>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.9660171866008!2d37.562091977285654!3d55.79382798882993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b549ee794cef41%3A0x40ba627aba2bacef!2z0YPQuy4g0JLQtdGA0YXQvdGP0Y8g0JzQsNGB0LvQvtCy0LrQsCwgMTTRgTIsINCc0L7RgdC60LLQsCwgMTI3MDgz!5e0!3m2!1sru!2sru!4v1692211496709!5m2!1sru!2sru"
+                      width="900" height="350" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div down_info_text style="padding: 20px; gap: 20px;">
+                  <p class="phone_us" style="cursor: pointer;"><i class="fas fa-map-marker-alt"
+                                                                  style="font-size: 16pt; margin-right: 20px;"></i> ул.
+                      Верхняя Масловка,
+                      14С2</p>
+                  <a class="address_us" href="tel:+79266071482" style="cursor: pointer;"><i class="fas fa-phone"
+                                                                                            style="font-size: 16pt; margin-right: 20px;"></i>
+                      +7 (926) 607-1482</a><br>
+                  <a class="mail_us" href="mailto:cdek21vek@cdek.ru" style="cursor: pointer;"><i class="fas fa-envelope"
+                                                                                                 style="font-size: 16pt; margin-right: 20px;"></i>
+                      cdek21vek@cdek.ru</a>
+                  <p class="work_time">Режим работы</p>
+                  <p class="work_time">Пн-Пт 10:00-20:00</p>
+                  <p class="work_time">Сб-Вс 10:00-18:00</p>
+              </div>
+          </div>
     </div>
   </div>
 <!--    <div class="Empty_block"></div>-->
 </body>
 <footer>
     <div class="footer_wrap">
-        <div class="footer_column first_column">
-            <p class="footer_word top_item">© 2023 Сдэк 21 Век</p>
-        </div>
-        <div class="footer_column">
-            <div class="footer_greeting address_footer" id="location">
-                <p style="cursor: pointer;"><i class="fas fa-map-marker-alt"
-                                               style="font-size: 16pt; margin-right: 20px;"></i> ул. Верхняя Масловка,
-                    14С2</p>
-
-            </div>
-            <div class="footer_greeting phone_footer">
-                <a href="tel:+79266071482" style="cursor: pointer;"><i class="fas fa-phone"
-                                                                       style="font-size: 16pt; margin-right: 20px;"></i>
-                    +7 (926) 607-1482</a>
-            </div>
-            <div class="footer_greeting mail_footer">
-                <a href="mailto:cdek21vek@cdek.ru" style="cursor: pointer;"><i class="fas fa-envelope"
-                                                                               style="font-size: 16pt; margin-right: 20px;"></i>
-                    cdek21vek@cdek.ru</a>
-            </div>
-        </div>
-        <div class="footer_column">
-            <div class="footer_greeting">
-                <p>Режим работы</p>
-            </div>
-            <div class="footer_greeting">
-                <p>Пн-Пт 10:00-20:00</p>
-            </div>
-            <div class="footer_greeting">
-                <p>Сб-Вс 10:00-18:00</p>
-            </div>
-        </div>
+        <p class="footer_word top_item">© 2023 Сдэк 21 Век</p>
     </div>
 </footer>
 <script src="js/header.js"></script>
