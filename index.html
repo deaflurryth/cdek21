@@ -269,11 +269,83 @@
 
     </div>
     <div class="calculator_wrapper">
-      <div class="stages_title">
+        <div class="stages_title">
             <h1>Калькулятор</h1>
             <h2 class="stages_h2_title">Расчет стоимости услуг доставки по договору для Интернет Магазина</h2>
         </div>
+        <div class="calc_header">
+            <div class="calc_wrapper_box">
+                <div class="calc_prefix"><h3
+                        style="font-size: 18pt; font-weight: 400; padding: 10px; margin-top: -4px;">
+                    Стоимость доставки с вашими параметрами</h3></div>
+                <img src="images/box2.png"
+                     style="width: 100px; height: 100px; position: absolute; margin-top: 320px; margin-right: 600px; transform: rotate(15deg)">
+                <form class="form_calc">
+                    <div class="calc_inputs">
+                        <label for="calc_input1">Город отправителя:</label>
+                        <input type="text" id="calc_input1" class="calc_input" required style="padding-left: 20px;
+                               color: #878787; transition: color 0.3s;"
+                               onfocus="if(this.value==='Москва') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
+                               onblur="if(this.value==='') { this.value='Москва'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
+                               value="Москва"/>
 
+                    </div>
+
+                    <div class="calc_inputs">
+                        <label for="calc_input2">Город получателя:</label>
+                        <input type="text" id="calc_input2" class="calc_input" required style="padding-left: 20px;
+                               color: #878787; transition: color 0.3s;"
+                               onfocus="if(this.value==='Санкт-Петербург') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
+                               onblur="if(this.value==='') { this.value='Санкт-Петербург'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
+                               value="Санкт-Петербург"/>
+                    </div>
+                    <div class="calc_inputs">
+                        <label for="calc_input3">Вес (в кг):</label>
+                        <input type="text" id="calc_input3" class="calc_input" required style="padding-left: 20px;
+                               color: #878787; transition: color 0.3s;"
+                               onfocus="if(this.value==='10') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
+                               onblur="if(this.value==='') { this.value='10'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
+                               value="10"/>
+                    </div>
+                    <div class="calc_inputs">
+                        <label for="calc_input4">Габариты:</label>
+                        <input type="text" id="calc_input4" class="calc_input_trio" required style="padding-left: 20px;
+                               color: #878787; transition: color 0.3s;"
+                               onfocus="if(this.value==='30') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
+                               onblur="if(this.value==='') { this.value='30'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
+                               value="30"/>
+                        <input type="text" id="calc_input4" class="calc_input_trio" required style="padding-left: 20px;
+                               color: #878787; transition: color 0.3s;"
+                               onfocus="if(this.value==='20') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
+                               onblur="if(this.value==='') { this.value='20'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
+                               value="20"/>
+                        <input type="text" id="calc_input4" class="calc_input_trio" required style="padding-left: 20px;
+                               color: #878787; transition: color 0.3s;"
+                               onfocus="if(this.value==='5') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
+                               onblur="if(this.value==='') { this.value='5'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
+                               value="5"/>
+                    </div>
+                </form>
+                <button class="calc_get_price">
+                    <span class="calc_get_price_top">РАССЧИТАТЬ</span>
+                </button>
+            </div>
+            <div class="calc_wrapper_box_bot">
+                <div class="calc_box_row">
+                    <span>Посылка</span>
+                    <div class="calc_box_grid1">
+                        <div class="calc_grid_cel">Тип и откуда/куда</div>
+                        <div class="calc_grid_cel">С договором интернет-магазина</div>
+                        <div class="calc_grid_cel">3</div>
+                        <div class="calc_grid_cel">4</div>
+                        <div class="calc_grid_cel">5</div>
+                        <div class="calc_grid_cel">6</div>
+                        <div class="calc_grid_cel">4</div>
+                        <div class="calc_grid_cel">5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="tarif_wrapper">
         <div class="stages_title">
@@ -425,73 +497,56 @@
             </div>
         </div>
 
-        <div class="slider_wrap">
-            <div class="stages_title">
+        <div class="slider_main_wrap" id="partners">
+            <div class="stages_title" style="margin-bottom: 100px;">
                 <h1>Наши партнеры</h1>
-                <h2 class="stages_h2_title">Мы оказываем людям и компаниям спектр услуг своевременной и гарантированной
-                    доставки, постоянно повышая уровень сервиса, внедряя
-                    <br>новые технологии, эффективно используя внутренний потенциал и внешние ресурсы.</h2>
             </div>
-            <div class="slider">
-                <div class="slider-content">
-                    <img src="images/Leroy_Merlin.png">
-                    <img src="images/Avito_logopng.png">
-                    <img src="images/logo-lamoda.png">
-                    <img src="images/poizon_logo.jpg">
-                    <img src="images/kupivip_logo.png">
-                    <img src="images/top_shop_logo.png">
-                    <img src="images/image-from-rawpixel-id-6247628-original.png">
-                    <img src="images/soccershop.png">
-                    <img src="images/sticksmoker_logo.png">
+            <div class="slider_wrap">
+                <i id="left" class="fa-solid fa-angle-left" style="color: #00B33D;"></i>
+                <div class="carousel">
+                    <img src="images/Avito_logopng.png" alt="img" draggable="false">
+                    <img src="images/image-from-rawpixel-id-6247628-original.png" alt="img" draggable="false">
+                    <img src="images/kupivip_logo.png" alt="img" draggable="false">
+                    <img src="images/Leroy_Merlin.png" alt="img" draggable="false">
+                    <img src="images/logo-lamoda.png" alt="img" draggable="false">
+                    <img src="images/poizon_logo.jpg" alt="img" draggable="false">
+                    <img src="images/soccershop.png" alt="img" draggable="false">
+                    <img src="images/sport-master.png" alt="img" draggable="false">
+                    <img src="images/sticksmoker_logo.png" alt="img" draggable="false">
                 </div>
-                <button class="prev-button">&#10094;</button>
-                <button class="next-button">&#10095;</button>
+                <i id="right" class="fa-solid fa-angle-right" style="color: #00B33D;"></i>
             </div>
         </div>
-        <div class="down_info_wrapper">
+        <div class="down_info_wrapper" id="contacts"
+             style="border: 2px dashed #00B33D; margin-bottom: -60px;  border-radius: 50px 50px 0px 0px;">
             <h1>Где мы находимся</h1>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.9660171866008!2d37.562091977285654!3d55.79382798882993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b549ee794cef41%3A0x40ba627aba2bacef!2z0YPQuy4g0JLQtdGA0YXQvdGP0Y8g0JzQsNGB0LvQvtCy0LrQsCwgMTTRgTIsINCc0L7RgdC60LLQsCwgMTI3MDgz!5e0!3m2!1sru!2sru!4v1692211496709!5m2!1sru!2sru"
-                    width="800" height="350" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy"
+                    width="900" height="350" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div down_info_text style="padding: 20px; gap: 20px;">
+                <p class="phone_us" style="cursor: pointer;"><i class="fas fa-map-marker-alt"
+                                                                style="font-size: 16pt; margin-right: 20px;"></i> ул.
+                    Верхняя Масловка,
+                    14С2</p>
+                <a class="address_us" href="tel:+79266071482" style="cursor: pointer;"><i class="fas fa-phone"
+                                                                                          style="font-size: 16pt; margin-right: 20px;"></i>
+                    +7 (926) 607-1482</a><br>
+                <a class="mail_us" href="mailto:cdek21vek@cdek.ru" style="cursor: pointer;"><i class="fas fa-envelope"
+                                                                                               style="font-size: 16pt; margin-right: 20px;"></i>
+                    cdek21vek@cdek.ru</a>
+                <p class="work_time">Режим работы</p>
+                <p class="work_time">Пн-Пт 10:00-20:00</p>
+                <p class="work_time">Сб-Вс 10:00-18:00</p>
+            </div>
         </div>
     </div>
   </div>
 <!--    <div class="Empty_block"></div>-->
 </body>
+
 <footer>
     <div class="footer_wrap">
-        <div class="footer_column first_column">
-            <p class="footer_word top_item">© 2023 Сдэк 21 Век</p>
-        </div>
-        <div class="footer_column">
-            <div class="footer_greeting address_footer" id="location">
-                <p style="cursor: pointer;"><i class="fas fa-map-marker-alt"
-                                               style="font-size: 16pt; margin-right: 20px;"></i> ул. Верхняя Масловка,
-                    14С2</p>
-
-            </div>
-            <div class="footer_greeting phone_footer">
-                <a href="tel:+79266071482" style="cursor: pointer;"><i class="fas fa-phone"
-                                                                       style="font-size: 16pt; margin-right: 20px;"></i>
-                    +7 (926) 607-1482</a>
-            </div>
-            <div class="footer_greeting mail_footer">
-                <a href="mailto:cdek21vek@cdek.ru" style="cursor: pointer;"><i class="fas fa-envelope"
-                                                                               style="font-size: 16pt; margin-right: 20px;"></i>
-                    cdek21vek@cdek.ru</a>
-            </div>
-        </div>
-        <div class="footer_column">
-            <div class="footer_greeting">
-                <p>Режим работы</p>
-            </div>
-            <div class="footer_greeting">
-                <p>Пн-Пт 10:00-20:00</p>
-            </div>
-            <div class="footer_greeting">
-                <p>Сб-Вс 10:00-18:00</p>
-            </div>
-        </div>
+        <p class="footer_word top_item">© 2023 Сдэк 21 Век</p>
     </div>
 </footer>
 <script src="js/header.js"></script>
