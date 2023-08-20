@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const length = document.getElementById('calc_input4').value;
         const width = document.getElementById('calc_input5').value;
         const height = document.getElementById('calc_input6').value;
-
+        console.log("отправитьель ", cityFrom)
+        console.log("получатель ", cityTo)
+        console.log("вес ", weight)
+        console.log("длина ", length)
+        console.log("ширина ", width)
+        console.log("высота ", height)
         const data = {
             cityFrom: cityFrom,
             cityTo: cityTo,
