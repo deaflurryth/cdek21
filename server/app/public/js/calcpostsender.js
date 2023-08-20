@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
     calcButton.addEventListener('click', function () {
         const cityFrom = document.getElementById('calc_input1').value;
         const cityTo = document.getElementById('calc_input2').value;
-        const weight = document.getElementById('calc_input3').value;
-        const length = document.getElementById('calc_input4').value;
-        const width = document.getElementById('calc_input5').value;
-        const height = document.getElementById('calc_input6').value;
+        const weight = parseFloat(document.getElementById('calc_input3').value);
+        const length = parseFloat(document.getElementById('calc_input4').value);
+        const width = parseFloat(document.getElementById('calc_input5').value);
+        const height = parseFloat(document.getElementById('calc_input6').value);
         console.log("отправитьель ", cityFrom)
         console.log("получатель ", cityTo)
         console.log("вес ", weight)
