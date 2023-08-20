@@ -12,17 +12,16 @@ router = APIRouter(prefix="/report")
 
 @router.get("/dashboard")
 async def get_dashboard_report(name = "dsadas", telephone = "dsadas"):
-    print(123)
     try:
         await send_email_report_dashboard(SMTP_TO_USER, name, telephone)
-        # async with async_session_maker() as session:
-        #     email = select(Email_form).where(Email_form.phone == telephone)
-        #     result = await session.execute(email)
-        #     existing_email = result.scalar_one_or_none()
-        #     if existing_email is None:
-        #         new_user = Email_form(name=name, phone=telephone)
-        #         session.add(new_user)
-        #     await session.commit()
+        async with async_session_maker() as session:
+            email = select(Email_form).where(Email_form.phone == telephone)
+            result = await session.execute(email)
+            existing_email = result.scalar_one_or_none()
+            if existing_email is None:
+                new_user = Email_form(name=name, phone=telephone)
+                session.add(new_user)
+            await session.commit()
 
         return {
             "status": 200,
@@ -31,3 +30,8 @@ async def get_dashboard_report(name = "dsadas", telephone = "dsadas"):
         }
     except Exception as e:
         print(e)
+
+
+@router.get("/fdss")
+async def prin():
+    return 1

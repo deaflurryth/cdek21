@@ -16,19 +16,36 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("ширина ", width)
         console.log("высота ", height)
         const data = {
-            cityFrom: cityFrom,
-            cityTo: cityTo,
+            sender_city_code: cityFrom,
+            receiver_city_code: cityTo,
             weight: weight,
             length: length,
             width: width,
             height: height
         };
+        const formData = {
+            sender_city_code: cityFrom,
+            receiver_city_code: cityTo,
+        };
+
+        const goodsData = {
+            weight: weight,
+            length: length,
+            width: width,
+            height: height,
+        };
+
+        formData.goods = goodsData;
+        console.log(data)
         fetch('http://127.0.0.1:8000/cdek_calc', {
-            method: 'POST',
+            method: "POST",
+            credentials: "include",
+            body: JSON.stringify(formData),
+            mode: "cors",
             headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+              "Content-Type": "application/json"
+            }
+
         })
             .then(response => response.json())
             .then(result => {

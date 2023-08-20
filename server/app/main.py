@@ -15,7 +15,8 @@ app = FastAPI(
     title="Cdek 21"
 )
 
-
+app.include_router(router)
+app.include_router(calculator_cdek)
 
 
 # class Email_formAdmin(ModelView, model=Email_form):
@@ -31,8 +32,7 @@ async def serve_spa(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 # admin = Admin(app, engine)
-app.include_router(router)
-app.include_router(calculator_cdek)
+
 
 # admin.add_view(Email_formAdmin)
 
@@ -45,6 +45,7 @@ origins = [
     "https://a1c8-46-148-105-36.ngrok-free.app",
     "localhost:3000",
     "127.0.0.1:3000",
+    "127.0.0.1:8000",
     "https://brawlcase-danyanara.amvera.io",
     "https://brawlcases.com",
     "https://www.brawlcases.com"
