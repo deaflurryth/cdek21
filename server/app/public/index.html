@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>СДЭК 21 век</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../../../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
           integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -223,11 +223,13 @@
                 <span class="step-number">1</span>
                 <div class="step-text-block" style="margin-top: 0px;">
                     <p class="step-text-info">Звоните нам
-                    <br>
-                    <span style="color: #00B33D">+7 (926) 607-1482</span><span style="padding-left: 20px; padding-right: 20px;"> ИЛИ</span>
-                    <button class="step_recall_button">
-                    <span class="step_recall_button_s">Заполнить форму</span>
-                    </button></p>
+                        <br>
+                        <span style="color: #00B33D">+7 (926) 607-1482</span><span
+                                style="padding-left: 20px; padding-right: 20px;"> ИЛИ</span>
+                        <button class="step_recall_button" href="#popup1">
+                            <span class="step_recall_button_s">Заполнить форму</span>
+                        </button>
+                    </p>
                 </div>
             </div>
             <div class="step">
@@ -306,7 +308,7 @@
                     </div>
                     <div class="calc_inputs">
                         <label for="calc_input3">Вес (в кг):</label>
-                        <input type="text" id="calc_input3" class="calc_input" required style="padding-left: 20px;
+                        <input type="number" id="calc_input3" class="calc_input" required style="padding-left: 20px;
                                color: #878787; transition: color 0.3s;"
                                onfocus="if(this.value==='10') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
                                onblur="if(this.value==='') { this.value='10'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
@@ -652,7 +654,7 @@
         </div>
     </div>
   </div>
-<!--    <div class="Empty_block"></div>-->
+  <!--    <div class="Empty_block"></div>-->
 </body>
 
 <footer>
@@ -661,11 +663,11 @@
     </div>
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/header.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/slider.js"></script>
-<script src="js/footer.js"></script>
-<script src="js/closingPopUP.js"></script>
-<script src="js/calculator.js"></script>
-<script src="js/logoback.js"></script>
+<script src="../../../js/header.js"></script>
+<script src="../../../js/animations.js"></script>
+<script src="../../../js/slider.js"></script>
+<script src="../../../js/footer.js"></script>
+<script src="../../../js/closingPopUP.js"></script>
+<script src="../../../js/calculator.js"></script>
+<script src="../../../js/logoback.js"></script>
 </html>

@@ -1267,16 +1267,17 @@ button:active .step_recall_button_s {
 
 .recallme_button_grid_d {
   margin-top: 40px;
-  --button_radius: 0.65em;
-  --button_color: #e8e8e8;
-  --button_outline_color: #00B33D;
-  font-size: 22px;
-  font-weight: bold;
-  border: none;
-  padding: 0.1em 0.2em;
-  border-radius: var(--button_radius);
-  background: var(--button_outline_color);
-  cursor: pointer;
+    --button_radius: 0.65em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #00B33D;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    padding: 0.1em 0.2em;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    cursor: pointer;
+    text-decoration: none;
 }
 .button_top_grid {
   display: block;
