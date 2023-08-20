@@ -181,7 +181,7 @@ goods = [
     }
 ]
 
-# Вызываем метод для расчета стоимости доставки
-response = client.get_delivery_cost(sender_city_code, receiver_city_code, goods)
-print(response)
-
+# # Вызываем метод для расчета стоимости доставки
+# response = client.get_delivery_cost(sender_city_code, receiver_city_code, goods)
+# print(response)
+#

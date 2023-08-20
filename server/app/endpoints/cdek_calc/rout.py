@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from server.app.endpoints.cdek_calc.utils import client
+from app.endpoints.cdek_calc.utils import client
 
 # http.client.HTTPConnection.debuglevel = 1
 # requests_log = logging.getLogger("requests.packages.urllib3")

@@ -1,6 +1,6 @@
 import smtplib
 from email.message import EmailMessage
-from server.app.config import SMTP_PASSWORD, SMTP_USER
+from app.config import SMTP_PASSWORD, SMTP_USER
 
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 465
