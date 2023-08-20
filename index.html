@@ -6,7 +6,11 @@
     <title>СДЭК 21 век</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.2/awesomplete.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -15,8 +19,8 @@
 <body>
   <header>
     <div class="header__wrapper">
-        <div class="logo">
-          <img src="images/cdek-logo.png" alt="CDEK Logo">
+        <div id="logo" class="logo">
+            <img src="images/cdek-logo.png" alt="CDEK Logo">
         </div>
         <nav>
           <ul class="main-menu">
@@ -29,7 +33,7 @@
                 <li><a href="#stages">Заключить договор</a></li>
                 <li><a href="#whyagree">Почему нам доверяют</a></li>
                 <li><a href="#partners">Наши партнеры</a></li>
-                <li><a href="#">Политика обработки данных</a></li>
+                <li><a href="privacy_policy.html">Политика обработки данных</a></li>
             </ul>
         </nav>
         <div class="menu-icon">
@@ -279,18 +283,18 @@
                   <div class="calc_prefix"><h3
                           style="font-size: 18pt; font-weight: 400; padding: 10px; margin-top: -4px;">
                       Стоимость доставки с вашими параметрами</h3></div>
-                  <img src="images/box2.png"
-                       style="width: 100px; height: 100px; position: absolute; margin-top: 320px; margin-right: 600px; transform: rotate(15deg)">
-                <form class="form_calc">
-                    <div class="calc_inputs">
-                        <label for="calc_input1">Город отправителя:</label>
-                        <input type="text" id="calc_input1" class="calc_input" required style="padding-left: 20px;
+                  <img id="box1" class="animated-box" src="images/box2.png">
+                  <img id="box2" class="animated-box" src="images/box2.png">
+                  <form class="form_calc">
+                      <div class="calc_inputs">
+                          <label for="calc_input1">Город отправителя:</label>
+                          <input type="text" id="calc_input1" class="calc_input" required style="padding-left: 20px;
                                color: #878787; transition: color 0.3s;"
-                               onfocus="if(this.value==='Москва') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
-                               onblur="if(this.value==='') { this.value='Москва'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
-                               value="Москва"/>
+                                 onfocus="if(this.value==='Москва') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
+                                 onblur="if(this.value==='') { this.value='Москва'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
+                                 value="Москва"/>
 
-                    </div>
+                      </div>
 
                     <div class="calc_inputs">
                         <label for="calc_input2">Город получателя:</label>
@@ -310,43 +314,147 @@
                     </div>
                     <div class="calc_inputs">
                         <label for="calc_input4">Габариты:</label>
-                        <input type="text" id="calc_input4" class="calc_input_trio" required style="padding-left: 20px;
+                        <input type="number" id="calc_input4" class="calc_input_trio" required style="padding-left: 20px;
                                color: #878787; transition: color 0.3s;"
                                onfocus="if(this.value==='30') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
                                onblur="if(this.value==='') { this.value='30'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
                                value="30"/>
-                        <input type="text" id="calc_input4" class="calc_input_trio" required style="padding-left: 20px;
+                        <input type="number" id="calc_input5" class="calc_input_trio" required style="padding-left: 20px;
                                color: #878787; transition: color 0.3s;"
                                onfocus="if(this.value==='20') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
                                onblur="if(this.value==='') { this.value='20'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
                                value="20"/>
-                        <input type="text" id="calc_input4" class="calc_input_trio" required style="padding-left: 20px;
+                        <input type="number" id="calc_input6" class="calc_input_trio" required style="padding-left: 20px;
                                color: #878787; transition: color 0.3s;"
                                onfocus="if(this.value==='5') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
                                onblur="if(this.value==='') { this.value='5'; this.style.opacity = 0.5; this.style.color = '#878787'; } else this.style.opacity = 1;"
                                value="5"/>
                     </div>
-                </form>
-                <button class="calc_get_price">
-                    <span class="calc_get_price_top">РАССЧИТАТЬ</span>
-                </button>
-            </div>
-            <div class="calc_wrapper_box_bot">
-                <div class="calc_box_row">
-                    <span>Посылка</span>
-                    <div class="calc_box_grid1">
-                        <div class="calc_grid_cel">Тип и откуда/куда</div>
-                        <div class="calc_grid_cel">С договором интернет-магазина</div>
-                        <div class="calc_grid_cel">3</div>
-                        <div class="calc_grid_cel">4</div>
-                        <div class="calc_grid_cel">5</div>
-                        <div class="calc_grid_cel">6</div>
-                        <div class="calc_grid_cel">4</div>
-                        <div class="calc_grid_cel">5</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                  </form>
+                  <button class="calc_get_price" id="calc_button">
+                      <span class="calc_get_price_top">РАССЧИТАТЬ</span>
+                  </button>
+              </div>
+              <div class="output_calc_down">
+                  <div class="split_line">
+                      <div class="split_line_title overnothing">&nbsp;</div>
+                      <div class="split_line_title overwhited" id="city_taker">Из Москвы в Санкт питербург</div>
+                      <div class="split_line_title overgreened">С договором <br>интернет-магазина</div>
+                  </div>
+                  <div class="first_row">
+                      <span class="title_column">Посылка</span>
+                      <div class="info_column">
+                          <span class="text_column_info">дверь → дверь</span>
+                          <span class="text_column_info">склад → дверь <br>
+                                дверь → склад*</span>
+                          <span class="text_column_info">склад → склад</span>
+                      </div>
+                      <div class="price_column">
+                          <span class="column_price">0₽</span>
+                          <span class="column_price">0₽</span>
+                          <span class="column_price">0₽</span>
+                      </div>
+                  </div>
+                  <div class="first_row">
+                      <span class="title_column back_white">Экономичная посылка</span>
+                      <div class="info_column">
+                          <span class="text_column_info">склад → дверь</span>
+                          <span class="text_column_info">склад → склад</span>
+                      </div>
+                      <div class="price_column">
+                          <span class="column_price">0₽</span>
+                          <span class="column_price">0₽</span>
+                      </div>
+                  </div>
+                  <div class="first_row">
+                      <span class="title_column">Экспресс-лайт</span>
+                      <div class="info_column">
+                          <span class="text_column_info">дверь → дверь</span>
+                          <span class="text_column_info">склад → дверь <br>
+                                дверь → склад*</span>
+                          <span class="text_column_info">склад → склад</span>
+                      </div>
+                      <div class="price_column">
+                          <span class="column_price">0₽</span>
+                          <span class="column_price">0₽</span>
+                          <span class="column_price">0₽</span>
+                      </div>
+                  </div>
+                  <div class="first_row">
+                      <span class="title_column back_white">Магистральный экспресс</span>
+                      <div class="info_column">
+                          <span class="text_column_info">склад → дверь</span>
+                      </div>
+                      <div class="price_column">
+                          <span class="column_price">0₽</span>
+                      </div>
+                  </div>
+                  <div class="first_row">
+                      <span class="title_column" style="font-size: 20pt;">Международный экспресс <br> документы</span>
+                      <div class="info_column">
+                          <span class="text_column_info">дверь → дверь</span>
+                      </div>
+                      <div class="price_column">
+                          <span class="column_price">0₽</span>
+                      </div>
+                  </div>
+                  <div class="first_row">
+                      <span class="title_column back_white secret_border_left" style="font-size: 20pt;">Международный экспресс <br>грузы</span>
+                      <div class="info_column">
+                          <span class="text_column_info">дверь → дверь</span>
+                      </div>
+                      <div class="price_column">
+                          <span class="column_price secret_border">0₽</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="calc_info_plette">
+                  <div class="calc_info_cel">
+                      <div class="iconic_flex" style="display: flex; gap: 10px;">
+                          <i class="fas fa-warehouse green-icon why_us_d" style="font-size: 45px;"></i>
+                          <i class="fas fa-arrow-right green-icon why_us_d" style="font-size: 45px;"></i>
+                          <i class="fas fa-warehouse green-icon why_us_d" style="font-size: 45px;"></i>
+                      </div>
+                      <h1 class="content-grid-h1">Склад - Склад</h1>
+                      <h1 class="content-grid-h1" style="font-size: 14pt; opacity: 0.8;">Доставка от пункта выдачи до
+                          пункта выдачи</h1>
+                  </div>
+                  <div class="calc_info_cel">
+                      <div class="iconic_flex" style="display: flex; gap: 10px;">
+                          <i class="fas fa-warehouse green-icon why_us_d" style="font-size: 45px;"></i>
+                          <i class="fas fa-arrow-right green-icon why_us_d" style="font-size: 45px;"></i>
+                          <i class="fas fa-door-open green-icon why_us_d" style="font-size: 45px;"></i>
+                      </div>
+                      <h1 class="content-grid-h1">Склад - Дверь</h1>
+                      <h1 class="content-grid-h1" style="font-size: 14pt; opacity: 0.8;">Доставка от пункта выдачи до
+                          двери покупателя*</h1>
+                  </div>
+                  <div class="calc_info_cel">
+                      <div class="iconic_flex" style="display: flex; gap: 10px;">
+                          <i class="fas fa-door-open green-icon why_us_d" style="font-size: 45px;"></i>
+                          <i class="fas fa-arrow-right green-icon why_us_d" style="font-size: 45px;"></i>
+                          <i class="fas fa-warehouse green-icon why_us_d" style="font-size: 45px;"></i>
+                      </div>
+                      <h1 class="content-grid-h1">Дверь - Склад</h1>
+                      <h1 class="content-grid-h1" style="font-size: 14pt; opacity: 0.8;">Доставка от вашего офиса до
+                          пункта выдачи*</h1>
+                  </div>
+                  <div class="calc_info_cel">
+                      <div class="iconic_flex" style="display: flex; gap: 10px;">
+                          <i class="fas fa-door-open green-icon why_us_d" style="font-size: 45px;"></i>
+                          <i class="fas fa-arrow-right green-icon why_us_d" style="font-size: 45px;"></i>
+                          <i class="fas fa-door-open green-icon why_us_d" style="font-size: 45px;"></i>
+                      </div>
+                      <h1 class="content-grid-h1">Дверь - Дверь</h1>
+                      <h1 class="content-grid-h1" style="font-size: 14pt; opacity: 0.8;">Доставка от вашего офиса до
+                          двери покупателя</h1>
+                  </div>
+              </div>
+              <div class="sub__title" style="display: flex; justify-content: center; margin-top: -100px;">
+                  <h3 class="stages_h2_title">* Отправка от вашего офиса считается отправкой от склада, если оформлен
+                      "забор со склада"</h3>
+              </div>
+          </div>
     </div>
       <div class="tarif_wrapper" id="tarifs">
           <div class="stages_title">
@@ -526,8 +634,9 @@
                     width="900" height="350" style="border:0; border-radius: 30px;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div down_info_text style="padding: 20px; gap: 20px;">
-                <p class="phone_us" style="cursor: pointer;"><i class="fas fa-map-marker-alt"
-                                                                style="font-size: 16pt; margin-right: 20px;"></i> ул.
+                <p class="phone_us" id="location" style="cursor: pointer;"><i class="fas fa-map-marker-alt"
+                                                                              style="font-size: 16pt; margin-right: 20px;"></i>
+                    ул.
                     Верхняя Масловка,
                     14С2</p>
                 <a class="address_us" href="tel:+79266071482" style="cursor: pointer;"><i class="fas fa-phone"
@@ -551,9 +660,12 @@
         <p class="footer_word top_item">© 2023 Сдэк 21 Век</p>
     </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/header.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/footer.js"></script>
 <script src="js/closingPopUP.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/logoback.js"></script>
 </html>
