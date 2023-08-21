@@ -27,6 +27,10 @@ const trigger_call = document.querySelector('.recallme_button');
 
 const trigger_feedback = document.querySelector('.feedback_button');
 
+const recallme_button4 = document.querySelector('.step_recall_button')
+
+const recallme_button3 = document.querySelector('.button_top_grid');
+
 // Закрытие попапа при клике на него или его фон
 popup1.addEventListener('click', (e) => {
   if (e.target === popup1) {
@@ -82,5 +86,14 @@ form2.addEventListener('submit', (e) => {
 
 recallme_button2.addEventListener('click', (e) => {
   e.preventDefault(); // Предотвращаем переход по ссылке
+  popup1.style.display = 'flex'; // Отображаем попап
+});
+
+recallme_button3.addEventListener('click', (e) => {
+  e.preventDefault(); // Предотвращаем переход по ссылке
+  popup1.style.display = 'flex'; // Отображаем попап
+});
+
+recallme_button4.addEventListener('click', (e) => {  e.preventDefault(); // Предотвращаем переход по ссылке
   popup1.style.display = 'flex'; // Отображаем попап
 });
