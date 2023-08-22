@@ -87,7 +87,5 @@ calcButton.addEventListener('click', function () {
     const value4 = calcInput4.value;
     const value5 = calcInput5.value;
     const value6 = calcInput6.value;
-    cityTaker.textContent = `из ${value1} в ${value2},
-                             весом ${value3}кг,
-                             габаритами ${value4}х${value5}х${value6}`;
+    cityTaker.innerHTML = `Маршрут: ${value1} - ${value2}<br>Вес: ${value3}кг<br>Габариты: ${value4}х${value5}х${value6}`;
 });
