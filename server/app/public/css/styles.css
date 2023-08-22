@@ -403,54 +403,91 @@ footer {
   padding: 38px 0px 0px 0px;
 }
 .recallme_button {
-  --button_radius: 0.65em;
-  --button_color: #e8e8e8;
-  --button_outline_color: #00B33D;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border: solid 2px #00B33D;
+  /*--button_radius: 0.65em;*/
+  /*--button_color: #e8e8e8;*/
+  /*--button_outline_color: #00B33D;*/
+  background-color: #e8e8e8;
+  border-radius: 40px;
   font-size: 16px;
   font-weight: bold;
-  border: none;
-  padding: 0.1em 0.2em;
-  border-radius: var(--button_radius);
-  background: var(--button_outline_color);
+  padding: 0;
+  /*border: none;*/
+  /*padding: 0.1em 0.2em;*/
+  /*border-radius: var(--button_radius);*/
+  /*background: var(--button_outline_color);*/
   cursor: pointer;
   text-decoration: none;
+    transition: transform 0.5s, background 0.3s  ;
 }
 .feedback_button {
-  --button_radius: 0.65em;
-  --button_color: #e8e8e8;
-  --button_outline_color: #00B33D;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border: solid 2px #00B33D;
+  /*--button_radius: 0.65em;*/
+  /*--button_color: #e8e8e8;*/
+  /*--button_outline_color: #00B33D;*/
+  background-color: #e8e8e8;
+  border-radius: 40px;
   font-size: 16px;
   font-weight: bold;
-  border: none;
-  padding: 0.1em 0.2em;
-  border-radius: var(--button_radius);
-  background: var(--button_outline_color);
+  padding: 0;
+  /*border: none;*/
+  /*padding: 0.1em 0.2em;*/
+  /*border-radius: var(--button_radius);*/
+  /*background: var(--button_outline_color);*/
   cursor: pointer;
-    text-decoration: none;
+  text-decoration: none;
+    transition: transform 0.5s, background 0.3s ;
+
 }
 .button_top {
   font-family: 'Oswald ExtraLight', sans-serif;
-  display: block;
-  box-sizing: border-box;
-  border: 2px solid var(--button_outline_color);
-  border-radius: var(--button_radius);
-  padding: 0.70em 0.9em;
-  background: var(--button_color);
+  /*display: block;*/
+  /*box-sizing: border-box;*/
+  /*border: 2px solid var(--button_outline_color);*/
+  /*border-radius: var(--button_radius);*/
+  /*padding: 0.70em 0.9em;*/
+  /*background: var(--button_color);*/
   color: #323232;
-  transform: translateY(-0.2em);
-  transition: transform 0.1s ease;
+  /*transform: translateY(-0.2em);*/
+  /*transition: transform 0.1s ease;*/
+}
+
+
+
+.recallme_button:hover {
+  transform: scale(1.1);
+}
+
+.recallme_button:active {
+  /*border-width: 4px;*/
+  background-color: #bbbbbb;
+  /*transform: scale(1.1);*/
+  /*box-shadow: 0 0 12px #00B33D inset;*/
+}
+
+
+.feedback_button:hover {
+  transform: scale(1.1);
+}
+
+.feedback_button:active {
+  background-color: #bbbbbb;
+  /*transform: scale(1.1);*/
 }
 
 /*///////////pop-up 1 /////////////*/
-
-a:hover .button_top {
-  transform: translateY(-0.33em);
-}
-
-a:active .button_top {
-  transform: translateY(0);
-}
-
 .overlay {
   position: fixed;
   top: 0;
@@ -1167,6 +1204,13 @@ input {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 16pt;
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*  flex-wrap: wrap;*/
+  padding-right: 20px;
+    align-content: center;
+    justify-content: center;
+
 }
 .steps_form_container {
   display: flex;
@@ -1179,34 +1223,34 @@ input {
 }
 
 .step_recall_button {
-  --button_radius: 0.65em;
-  --button_color: #e8e8e8;
-  --button_outline_color: #00B33D;
+    width: 200px;
+  height: 45px;
+  border: solid 2px #00B33D;
+  background-color: #e8e8e8;
+  border-radius: 40px;
   font-size: 16px;
   font-weight: bold;
-  border: none;
-  padding: 0.1em 0.2em;
-  border-radius: var(--button_radius);
-  background: var(--button_outline_color);
   cursor: pointer;
+  text-decoration: none;
+    transition: transform 0.5s, background 0.3s;
 }
 .step_recall_button_s {
-  display: block;
-  box-sizing: border-box;
-  border: 2px solid var(--button_outline_color);
-  border-radius: var(--button_radius);
-  padding: 0.70em 0.9em;
+  /*display: block;*/
+  /*box-sizing: border-box;*/
+  /*border: 2px solid var(--button_outline_color);*/
+  /*border-radius: var(--button_radius);*/
+  /*padding: 0.70em 0.9em;*/
   background: var(--button_color);
   color: #323232;
-  transform: translateY(-0.2em);
-  transition: transform 0.1s ease;
+  /*transform: translateY(-0.2em);*/
+  /*transition: transform 0.1s ease;*/
 }
-button:hover .step_recall_button_s {
-  transform: translateY(-0.33em);
+.step_recall_button:hover {
+  transform: scale(1.1);
 }
 
-button:active .step_recall_button_s {
-  transform: translateY(0);
+.step_recall_button:active {
+  background-color: #bbbbbb;
 }
 
 .tarif_wrapper {
@@ -1278,37 +1322,57 @@ button:active .step_recall_button_s {
 }
 
 .recallme_button_grid_d {
-  margin-top: 40px;
-    --button_radius: 0.65em;
-    --button_color: #e8e8e8;
-    --button_outline_color: #00B33D;
-    font-size: 22px;
-    font-weight: bold;
-    border: none;
-    padding: 0.1em 0.2em;
-    border-radius: var(--button_radius);
-    background: var(--button_outline_color);
-    cursor: pointer;
-    text-decoration: none;
+  width: 350px;
+  height: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  align-content: center;
+  justify-content: center;
+  border: solid 2px #00B33D;
+  /*--button_radius: 0.65em;*/
+  /*--button_color: #e8e8e8;*/
+  /*--button_outline_color: #00B33D;*/
+  background-color: #e8e8e8;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  /*border: none;*/
+  /*padding: 0.1em 0.2em;*/
+  /*border-radius: var(--button_radius);*/
+  /*background: var(--button_outline_color);*/
+  cursor: pointer;
+  text-decoration: none;
+    transition: transform 0.5s, background 0.3s ;
+
 }
 .button_top_grid {
-  display: block;
-  box-sizing: border-box;
-  border: 2px solid var(--button_outline_color);
-  border-radius: var(--button_radius);
-  padding: 0.70em 0.9em;
-  background: var(--button_color);
+  font-family: 'Oswald ExtraLight', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  /*display: block;*/
+  /*box-sizing: border-box;*/
+  /*border: 2px solid var(--button_outline_color);*/
+  /*border-radius: var(--button_radius);*/
+  /*padding: 0.70em 0.9em;*/
+  /*background: var(--button_color);*/
   color: #323232;
-  transform: translateY(-0.2em);
-  transition: transform 0.1s ease;
+  /*transform: translateY(-0.2em);*/
+  /*transition: transform 0.1s ease;*/
 }
 
-button:hover .button_top_grid {
-  transform: translateY(-0.33em);
+
+
+.recallme_button_grid_d:hover {
+  transform: scale(1.1);
 }
 
-button:active .button_top_grid {
-  transform: translateY(0);
+.recallme_button_grid_d:active {
+  /*border-width: 4px;*/
+  background-color: #bbbbbb;
+  /*transform: scale(1.1);*/
+  /*box-shadow: 0 0 12px #00B33D inset;*/
 }
 .stages_h2_title {
     font-family: "Oswald", sans-serif;
@@ -1726,38 +1790,56 @@ button:active .button_top_grid {
 }
 
 .calc_get_price {
-    --button_radius: 0.65em;
-    --button_color: #e8e8e8;
-    --button_outline_color: #00B33D;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    padding: 0.1em 0.2em;
-    border-radius: var(--button_radius);
-    background: var(--button_outline_color);
-    cursor: pointer;
-    margin-top: 40px;
-    width: 250px;
+  width: 250px;
+  height: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  border: solid 2px #00B33D;
+  margin-top: 35px;
+  /*--button_radius: 0.65em;*/
+  /*--button_color: #e8e8e8;*/
+  /*--button_outline_color: #00B33D;*/
+  background-color: #e8e8e8;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  /*border: none;*/
+  /*padding: 0.1em 0.2em;*/
+  /*border-radius: var(--button_radius);*/
+  /*background: var(--button_outline_color);*/
+  cursor: pointer;
+  text-decoration: none;
+    transition: transform 0.5s, background 0.3s ;
+
 }
 
 .calc_get_price_top {
-    display: block;
-    box-sizing: border-box;
-    border: 2px solid var(--button_outline_color);
-    border-radius: var(--button_radius);
-    padding: 0.70em 0.9em;
-    background: var(--button_color);
-    color: #323232;
-    transform: translateY(-0.2em);
-    transition: transform 0.1s ease;
+  font-family: 'Oswald ExtraLight', sans-serif;
+  /*display: block;*/
+  /*box-sizing: border-box;*/
+  /*border: 2px solid var(--button_outline_color);*/
+  /*border-radius: var(--button_radius);*/
+  /*padding: 0.70em 0.9em;*/
+  /*background: var(--button_color);*/
+  color: #323232;
+  /*transform: translateY(-0.2em);*/
+  /*transition: transform 0.1s ease;*/
 }
 
-button:hover .calc_get_price_top {
-    transform: translateY(-0.33em);
+
+
+.calc_get_price:hover {
+  transform: scale(1.1);
 }
 
-button:active .calc_get_price_top {
-    transform: translateY(0);
+.calc_get_price:active {
+  /*border-width: 4px;*/
+  background-color: #bbbbbb;
+  /*transform: scale(1.1);*/
+  /*box-shadow: 0 0 12px #00B33D inset;*/
 }
 
 .output_calc_down {
@@ -1798,6 +1880,7 @@ button:active .calc_get_price_top {
     font-size: 20pt;
     color: #222222;
     border-left: 1px solid #00B33D;
+    padding-top: 40px;
 }
 
 .overgreened {
