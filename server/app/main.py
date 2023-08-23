@@ -5,7 +5,7 @@ from app.database import engine
 from app.endpoints.cdek_calc.rout import calculator_cdek
 from app.endpoints.email_form.router import router
 from app.endpoints.email_form.models import Email_form
-# from sqladmin import ModelView, Admin
+from sqladmin import ModelView, Admin
 from fastapi.responses import Response
 from fastapi.requests import Request
 from fastapi.staticfiles import StaticFiles
@@ -18,10 +18,11 @@ app = FastAPI(
 app.include_router(router)
 app.include_router(calculator_cdek)
 
+admin = Admin(app, engine)
 
-# class Email_formAdmin(ModelView, model=Email_form):
-#     column_list = [Email_form.id, Email_form.name, Email_form.phone]
-
+class Email_formAdmin(ModelView, model=Email_form):
+    column_list = [Email_form.id, Email_form.name, Email_form.phone]
+admin.add_view(Email_formAdmin)
 
 templates = Jinja2Templates(directory="app/public/")
 app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
@@ -31,10 +32,9 @@ app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
 async def serve_spa(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
-# admin = Admin(app, engine)
 
 
-# admin.add_view(Email_formAdmin)
+
 
 
 origins = [
