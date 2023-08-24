@@ -13,11 +13,22 @@
 
 
 body, html {
+  width: 100%;
   margin: 0;
   padding: 0;
   background-color: #fafafa;
+
+
+    max-width: 100%;
+    overflow-x: hidden;
   /*background-color: #6B7C93;*/
+
+
 }
+
+
+
+
 
 .header__wrapper {
   display: flex;
@@ -48,15 +59,15 @@ h2 {
     font-size: 24pt;
 }
 
-@media screen and (max-width: 1440px) {
-    h1 {
-        font-size: 24pt;
-    }
+/*@media screen and (max-width: 1440px) {*/
+/*    h1 {*/
+/*        font-size: 24pt;*/
+/*    }*/
 
-    h2 {
-        font-size: 20pt;
-    }
-}
+/*    h2 {*/
+/*        font-size: 20pt;*/
+/*    }*/
+/*}*/
 
 .logo img {
     margin-top: 5px;
@@ -273,7 +284,7 @@ footer {
    padding-left: 20px;
    padding-right: 20px;
    padding-bottom: 20px;
-   padding-top: 5px;
+   padding-top: 15px;
 }
 .left-content-banner.appear {
     opacity: 1;
@@ -352,14 +363,15 @@ footer {
     }
 }
 
-@media screen and (min-width: 1800px) {
-    .right-content-banner {
-        width: 1150px;
-    }
-}
+/*@media screen and (min-width: 1800px) {*/
+/*    .right-content-banner {*/
+/*        width: 1150px;*/
+/*    }*/
+/*}*/
 
 .banner_h1_text {
     font-size: 20pt;
+    margin-top: 0px;
 }
 
 .banner_h2_text {
@@ -886,7 +898,7 @@ input {
     text-align: center;
     position: fixed;
     right: 2%;
-    bottom: 2%;
+    bottom: 4%;
     z-index: 999;
     transition: .3s ease-in-out;
     -webkit-animation: hoverWave linear 1s infinite;
@@ -1040,7 +1052,7 @@ input {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  width: 1200px; /* Вы можете задать нужную ширину сетки */
+  width: 100%; /* Вы можете задать нужную ширину сетки */
   height: 400px;
   margin: 0 auto; /* Для центрирования */
 }
@@ -1105,11 +1117,11 @@ input {
     font-size: 28pt;
 }
 
-@media screen and (max-width: 1440px) {
-    .stages_h2_title {
-        font-size: 24pt;
-    }
-}
+/*@media screen and (max-width: 1440px) {*/
+/*    .stages_h2_title {*/
+/*        font-size: 24pt;*/
+/*    }*/
+/*}*/
 
 .stages_h2_title {
     font-weight: 300;
@@ -1143,7 +1155,7 @@ input {
 .step-label {
   position: absolute;
   display: flex;
-  margin-right: 700px;
+  margin-right: 50vw;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24pt;
@@ -1186,7 +1198,7 @@ input {
 .step-text-block {
   position: absolute;
   display: flex;
-  margin-left: 900px;
+  margin-left: 70vw;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24pt;
@@ -1381,11 +1393,11 @@ input {
     color: #323232;
 }
 
-@media screen and (max-width: 1440px) {
-    .stages_h2_title {
-        font-size: 12pt;
-    }
-}
+/*@media screen and (max-width: 1440px) {*/
+/*    .stages_h2_title {*/
+/*        font-size: 12pt;*/
+/*    }*/
+/*}*/
 
 .about-comp_wrapper{
   padding: 50px;
@@ -1517,7 +1529,7 @@ input {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  width: 1300px;
+  width: 100%;
   height: 440px;
   margin: 0 auto;
   padding-bottom: 100px;
@@ -1637,17 +1649,17 @@ input {
     margin-left: 0px;
 }
 
-@media screen and (max-width: 900px) {
-    .carousel img {
-        width: calc(100% / 2);
-    }
-}
+/*@media screen and (max-width: 1200px) {*/
+/*    .carousel img {*/
+/*        width: calc(100% / 2);*/
+/*    }*/
+/*}*/
 
-@media screen and (max-width: 550px) {
-    .carousel img {
-        width: 100%;
-    }
-}
+/*@media screen and (max-width: 550px) {*/
+/*    .carousel img {*/
+/*        width: 100%;*/
+/*    }*/
+/*}*/
 
 
 .down_info_text {
@@ -1715,6 +1727,10 @@ input {
     align-items: center;
     flex-direction: column;
     padding-bottom: 200px;
+}
+
+.calc_header{
+    width: 100%;
 }
 
 .calc_wrapper_box {
@@ -1950,7 +1966,7 @@ input {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    width: 1300px;
+    width: 100%;
     height: 440px;
     margin: 0 auto;
     padding-bottom: 100px;
@@ -2066,11 +2082,7 @@ input {
     padding-bottom: 30px;
 }
 
-@media screen and (max-width: 1024px) {
-}
 
-@media screen and (max-width: 768px) {
-}
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -2092,4 +2104,17 @@ input {
     background-color: #00b33d;
     border-radius: 9px;
     border: 1px solid #fafafa;
+}
+
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 640px){
+
+}
+
+@media screen and (max-width: 320px){
+
 }
