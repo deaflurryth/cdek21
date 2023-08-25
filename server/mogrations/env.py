@@ -5,10 +5,10 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from server.app.database import Base
+from app.database import Base
 
 
-from server.app.config import DB_HOST, DB_PORT, DB_USER, DB_NAME, DB_PASS
+from app.config import DB_HOST, DB_PORT, DB_USER, DB_NAME, DB_PASS
 
 
 # this is the Alembic Config object, which provides
