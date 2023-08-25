@@ -1730,7 +1730,7 @@ input {
 }
 
 .calc_header{
-    width: 100%;
+    width: 80%;
 }
 
 .calc_wrapper_box {
@@ -1999,14 +1999,14 @@ input {
 
 #box1 {
     margin-top: 320px;
-    margin-right: 800px;
+    margin-right: 50vw;
     transform: rotate(15deg);
     animation: floatingAnimation1 4s ease-in-out infinite;
 }
 
 #box2 {
     margin-top: 250px;
-    margin-left: 870px;
+    margin-left: 60vw;
     transform: rotate(-15deg);
     animation: floatingAnimation2 4s ease-in-out infinite;
 }
