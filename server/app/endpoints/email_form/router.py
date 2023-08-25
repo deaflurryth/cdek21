@@ -16,8 +16,10 @@ class FormCall(BaseModel):
 @router.post("/dashboard")
 async def get_dashboard_report(data: FormCall):
     try:
+
         name =  data.name
         telephone = data.telephone
+        print(name)
         await send_email_report_dashboard(SMTP_TO_USER, name, telephone)
         async with async_session_maker() as session:
             email = select(Email_form).where(Email_form.phone == telephone)
