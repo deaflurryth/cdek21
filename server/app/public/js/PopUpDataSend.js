@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = nameInput.value;
     const phoneNumber = phoneNumberInput.value;
 
-    const url = "http://127.0.0.1:8000/";
+    const url = "https://test-cdek-danyanara.amvera.io/report/dashboard";
     const data = {
       name: name,
       phone: phoneNumber
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = nameInput.value;
     const phoneNumber = phoneNumberInput.value;
     const shorterInfo = infoInput.value;
-    const url = "http://127.0.0.1:8000/";
+    const url = "https://test-cdek-danyanara.amvera.io/report/dashboard";
     const data = {
       name: name,
       phone: phoneNumber,
