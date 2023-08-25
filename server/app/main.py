@@ -48,7 +48,8 @@ origins = [
     "127.0.0.1:8000",
     "https://brawlcase-danyanara.amvera.io",
     "https://brawlcases.com",
-    "https://www.brawlcases.com"
+    "https://www.brawlcases.com",
+    "https://test-cdek-danyanara.amvera.io"
 ]
 
 app.add_middleware(

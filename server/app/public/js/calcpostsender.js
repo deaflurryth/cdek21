@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         formData.goods = goodsData;
         console.log(data)
-        fetch('http://127.0.0.1:8000/cdek_calc', {
+        fetch('https://test-cdek-danyanara.amvera.io/cdek_calc', {
             method: "POST",
             credentials: "include",
             body: JSON.stringify(formData),
