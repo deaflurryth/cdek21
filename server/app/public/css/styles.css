@@ -415,7 +415,7 @@ footer {
   padding: 38px 0px 0px 0px;
 }
 .recallme_button {
-  width: 200px;
+  width: 180px;
   height: 45px;
   display: flex;
   flex-wrap: wrap;
@@ -427,7 +427,7 @@ footer {
   /*--button_outline_color: #00B33D;*/
   background-color: #e8e8e8;
   border-radius: 40px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   padding: 0;
   /*border: none;*/
@@ -439,7 +439,7 @@ footer {
     transition: transform 0.5s, background 0.3s  ;
 }
 .feedback_button {
-  width: 200px;
+  width: 180px;
   height: 45px;
   display: flex;
   flex-wrap: wrap;
@@ -451,7 +451,7 @@ footer {
   /*--button_outline_color: #00B33D;*/
   background-color: #e8e8e8;
   border-radius: 40px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   padding: 0;
   /*border: none;*/
@@ -1966,7 +1966,7 @@ input {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    width: 100%;
+    width: 90%;
     height: 440px;
     margin: 0 auto;
     padding-bottom: 100px;
