@@ -17,12 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Отправка данных на сервер:", data);
 
     fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      mode: "cors",
-      body: JSON.stringify(data)
+            method: "POST",
+            credentials: "include",
+            body: JSON.stringify(data),
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json"
+            }
     })
         .then(response => response.json())
         .catch(error => {
@@ -52,12 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Отправка данных на сервер:", data);
 
     fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      mode: "cors",
-      body: JSON.stringify(data)
+            method: "POST",
+            credentials: "include",
+            body: JSON.stringify(data),
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json"
+            }
     })
         .then(response => response.json())
         .catch(error => {
