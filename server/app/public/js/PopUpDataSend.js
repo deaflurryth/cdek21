@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
   submitButton.addEventListener('click', function (event) {
     event.preventDefault();
 
-    const name = nameInput.value;
-    const phone = phoneInput.value;
+    const name = nameInput;
+    const phone = phoneInput;
 
     const data = {
       name: name,
