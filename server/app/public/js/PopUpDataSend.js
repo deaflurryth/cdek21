@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
       phone: phone
     };
     console.log(data)
-    fetch('https://test-cdek-danyanara.amvera.io/dashboard', {
+    fetch('https://test-cdek-danyanara.amvera.io/report/dashboard', {
     method: "POST",
     credentials: "include",
     body: JSON.stringify(data),
