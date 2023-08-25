@@ -16,11 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     console.log(data)
     fetch('https://test-cdek-danyanara.amvera.io/dashboard', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+    method: "POST",
+    credentials: "include",
+    body: JSON.stringify(data),
+    mode: "cors",
+    headers: {
+        "Content-Type": "application/json"
+    }
     })
       .then(response => response.json())
       .then(result => {
