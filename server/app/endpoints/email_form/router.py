@@ -18,15 +18,15 @@ async def get_dashboard_report(data: FormCall):
     try:
 
         name =  data.name
-        telephone = data.phone
+        phone = data.phone
         print(name)
-        await send_email_report_dashboard(SMTP_TO_USER, name, telephone)
+        await send_email_report_dashboard(name, phone)
         async with async_session_maker() as session:
-            email = select(Email_form).where(Email_form.phone == telephone)
+            email = select(Email_form).where(Email_form.phone == phone)
             result = await session.execute(email)
             existing_email = result.scalar_one_or_none()
             if existing_email is None:
-                new_user = Email_form(name=name, phone=telephone)
+                new_user = Email_form(name=name, phone=phone)
                 session.add(new_user)
             await session.commit()
 
