@@ -8,7 +8,5 @@ build:
   requirementsPath: ./server/requirements.txt
 
 run:
-# command: cd ./server && uvicorn app.main:app --log-config log.ini --host 0.0.0.0
- command: cd server && celery -A app.endpoints.tasks.task:celery worker --loglevel=INFO --detach && gunicorn app.main:app --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
- #command: cd ./server && celery -A app.endpoints.tasks.task:celery worker --loglevel=INFO &  gunicorn app.main:app --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
+ command: cd server && gunicorn app.main:app --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
  containerPort: 8000

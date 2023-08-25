@@ -1,0 +1,70 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="4">
+            <item index="0" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="1" class="java.lang.String" itemvalue="django" />
+            <item index="2" class="java.lang.String" itemvalue="django-online-users" />
+            <item index="3" class="java.lang.String" itemvalue="psycopg2-binary" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N806" />
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnreachableCodeInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="app.db.fastapi_users" />
+          <option value="requests_html" />
+          <option value="sqlalchemy.ext.asyncio.session.AsyncSession.query" />
+          <option value="dict.dict" />
+          <option value="tests.test_operations.async_session_maker" />
+          <option value="tests.conftest.authenticate.post" />
+          <option value="typing.AsyncGenerator.post" />
+          <option value="app.api.endpoints.auth.schemas.User.__await__" />
+          <option value="int.__getitem__" />
+          <option value="tests.conftest.main" />
+          <option value="git.repo.base.Repo.__await__" />
+          <option value="sqlalchemy.engine.result.Result.__await__" />
+          <option value="starlette.requests.form.get" />
+          <option value="fastapi_admin.backends" />
+          <option value="aiohttp.client.ClientSession.add" />
+          <option value="aiohttp.client.ClientSession.begin" />
+          <option value="aiohttp.client.ClientSession.execute" />
+          <option value="app.database.get_async_session.execute" />
+          <option value="fastapi_injector.FastAPIInjector" />
+          <option value="fastapi_cache.FastAPICache" />
+          <option value="fastapi_cache.backends.redis.RedisBackend" />
+          <option value="management.admin_tools.modules" />
+          <option value="dict.getlist" />
+          <option value="ssl._create_unverified_context" />
+          <option value="django.contrib.admin.ACTION_CHECKBOX_NAME" />
+          <option value="django.contrib.admin.helpers" />
+          <option value="main.views.OfficeAndStickermafiaView_new" />
+          <option value="testtask_IQ_EQ.testtask_IQ_EQ.urls.testing" />
+          <option value="type.with_ui" />
+          <option value="fastapi_admin.Admin" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
