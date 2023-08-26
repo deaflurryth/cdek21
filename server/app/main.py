@@ -14,11 +14,11 @@ from fastapi.templating import Jinja2Templates
 app = FastAPI(
     title="Cdek 21"
 )
-
+admin = Admin(app, engine)
 app.include_router(router)
 app.include_router(calculator_cdek)
 
-admin = Admin(app, engine)
+
 
 class Email_formAdmin(ModelView, model=Email_form):
     column_list = [Email_form.id, Email_form.name, Email_form.phone]
