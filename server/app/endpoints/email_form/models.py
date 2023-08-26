@@ -9,3 +9,4 @@ class Email_form(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String)
     phone = Column(String)
+    description = Column(String)
