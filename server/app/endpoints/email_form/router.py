@@ -12,7 +12,6 @@ router = APIRouter(prefix="/report")
 class FormCall(BaseModel):
     name: str
     phone: str
-    info: str
 
 @router.post("/dashboard")
 async def get_dashboard_report(data: FormCall):
@@ -20,7 +19,6 @@ async def get_dashboard_report(data: FormCall):
 
         name =  data.name
         phone = data.phone
-        description = data.info
         await send_email_report_dashboard(name, phone)
         async with async_session_maker() as session:
             email = select(Email_form).where(Email_form.phone == phone)
