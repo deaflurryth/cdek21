@@ -1931,7 +1931,7 @@ input {
     background: #00B33D;
     color: white;
     font-family: "Oswald", sans-serif;
-    font-size: 22pt;
+    font-size: 20pt;
     text-align: center;
 }
 
@@ -2108,7 +2108,116 @@ input {
 
 
 @media screen and (max-width: 1200px){
+.right-content-banner{
+    display: none;
+}
 
+.left-content-banner{
+    width: 100%;
+}
+
+.content-grid-block{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item{
+    width: 200px;
+    height: 200px;
+}
+
+.content-grid-block{
+    width: 100%;
+}
+
+.stages_wrapper{
+    margin-top: 650px;
+}
+
+.content-grid-h1{
+    margin-bottom: 3px;
+}
+
+.content-grid-h2{
+    margin-top: 0px;
+}
+
+.calc_header{
+    width: 100%;
+}
+
+.title_column{
+    font-size: 14pt;
+}
+
+.split_line_title{
+    font-size: 14pt;
+}
+
+.calculator_wrapper{
+    padding-bottom: 0px;
+}
+#box1 {
+    margin-top: 410px;
+    margin-right: 60vw;
+}
+
+.grid-container_t{
+    gap: 5px;
+}
+
+.grid-item_t{
+        font-size: 11pt;
+    width: 140px;
+    }
+
+.recallme_button_grid_d {
+    width: 270px;
+}
+
+.stages_h2_title{
+    font-size: 12pt;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.about-comp-title{
+    font-size: 20px;
+}
+
+
+
+.about-comp-container{
+    padding: 15px 50px 25px 50px;
+    width: 90%;
+}
+
+.about-comp_wrapper {
+    padding: 50px 50px 0px 0px
+
+}
+
+.int-about-card {
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+.txt-about-card {
+    font-size: 14px;
+}
+
+.about-comp-card-txt{
+    width: 200px;
+    height: 160px;
+}
+
+.about-comp-card-img{
+    display: none;
+}
+
+.about-comp-card-txt{
+    margin-bottom: 25px;
+}
 }
 
 @media screen and (max-width: 640px){
