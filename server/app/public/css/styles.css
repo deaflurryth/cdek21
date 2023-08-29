@@ -1139,17 +1139,17 @@ input {
 }
 
 .step {
-  width: 100px;
-  height: 100px;
-  background-color: #ccc;
-  border-radius: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: bold;
-  margin-bottom: 240px;
-  z-index: 2;
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 150px;
+    z-index: 2;
 
 }
 
@@ -1197,20 +1197,20 @@ input {
   padding-left: 200px;
 }
 .step-text-block {
-  /*margin-top: 0px;*/
-  position: absolute;
-  display: flex;
-  margin-left: 70vw;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 24pt;
-  color: #323232;
-  width: 560px;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-  justify-content: flex-start;
-  align-items: flex-start;
+    /*margin-top: 0px;*/
+    position: absolute;
+    display: flex;
+    margin-left: 55vw;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 24pt;
+    color: #323232;
+    width: 560px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
   color: #323232;
   margin-top: 80px;
 }
@@ -1288,14 +1288,14 @@ input {
 
 .grid-container_t {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 280px);
     grid-template-rows: repeat(13, 80px);
     gap: 20px; /* Пространство между ячейками */
     /*height: 500px; !* Высота блока *!*/
     /*border: 1px solid #000;*/
     padding: 10px;
     margin-top: 50px;
-  }
+}
 
 .grid-item_t {
   border-bottom: 1px solid #ccc;
@@ -1411,9 +1411,10 @@ input {
 /*    }*/
 /*}*/
 
-.about-comp_wrapper{
-  padding: 50px;
-  display: block;
+.about-comp_wrapper {
+    padding: 50px;
+    display: block;
+    margin-top: 50px;
 }
 
 .about-comp-container{

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const steps = document.querySelectorAll(".step");
     const line = document.querySelector(".line");
     const container = document.querySelector(".stages_wrapper");
-    const stepHeight = steps[0].offsetHeight + 60; // Учтем расстояние между кружками
+    const stepHeight = steps[0].offsetHeight - 30; // Учтем расстояние между кружками
 
     const totalHeight = container.scrollHeight - window.innerHeight;
     const maxScrollPosition = totalHeight - stepHeight;
