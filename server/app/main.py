@@ -50,7 +50,7 @@ origins = [
     "https://brawlcases.com",
     "https://www.brawlcases.com",
     "https://test-cdek-danyanara.amvera.io",
-    "https://test-cdek-danyanara.amvera.io/"
+    "https://test-cdek-danyanara.amvera.io/",
 ]
 
 app.add_middleware(
