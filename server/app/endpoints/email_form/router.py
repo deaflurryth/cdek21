@@ -10,25 +10,29 @@ from pydantic.class_validators import Optional
 
 router = APIRouter(prefix="/report")
 
+
 class FormCall(BaseModel):
     name: str
     phone: str
     descriprion: Optional[str] = None
 
+
 @router.post("/dashboard")
 async def get_dashboard_report(data: FormCall):
     try:
-
-        name =  data.name
-        phone = data.phone
-        info = data.descriprion
-        if info is None:
-            await send_email_report_dashboard(name, phone)
-        else:
-            await send_email_report_dashboard(name, phone, info)
         async with async_session_maker() as session:
-            new_user = Email_form(name=name, phone=phone, description=info)
+
+            name = data.name
+            phone = data.phone
+            info = data.descriprion
+            if info is None:
+                await send_email_report_dashboard(name, phone)
+                new_user = Email_form(name=name, phone=phone)
+            else:
+                await send_email_report_dashboard(name, phone, info)
+                new_user = Email_form(name=name, phone=phone, description=info)
             session.add(new_user)
+
             await session.commit()
 
         return {
@@ -38,4 +42,3 @@ async def get_dashboard_report(data: FormCall):
         }
     except Exception as e:
         print(e)
-
