@@ -21,7 +21,7 @@ app.include_router(calculator_cdek)
 
 
 class Email_formAdmin(ModelView, model=Email_form):
-    column_list = [Email_form.id, Email_form.name, Email_form.phone]
+    column_list = [Email_form.id, Email_form.name, Email_form.phone, Email_form.description]
 admin.add_view(Email_formAdmin)
 
 templates = Jinja2Templates(directory="app/public/")
