@@ -14,7 +14,7 @@ router = APIRouter(prefix="/report")
 class FormCall(BaseModel):
     name: str
     phone: str
-    descriprion: Optional[str] = None
+    info: Optional[str] = None
 
 
 @router.post("/dashboard")
@@ -24,7 +24,7 @@ async def get_dashboard_report(data: FormCall):
 
             name = data.name
             phone = data.phone
-            info = data.descriprion
+            info = data.info
             if info is None:
                 await send_email_report_dashboard(name, phone)
                 new_user = Email_form(name=name, phone=phone)
