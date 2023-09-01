@@ -39,8 +39,6 @@ def calc_cost_delivery(data: FormCalc):
     ]
 
     response = client.get_delivery_cost(sender_city_code, receiver_city_code, goods)
-    print(response)
-
     return response
 
 
