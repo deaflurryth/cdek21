@@ -5,7 +5,7 @@ from boltons.iterutils import remap
 
 
 class CDEK2Client:
-    __CDEK_URL = 'https://api.edu.cdek.ru'
+    __CDEK_URL = 'https://api.cdek.ru'
     __AUTH_URL = '/v2/oauth/token?parameters'
     __DELIVERY_POINTS_URL = '/v2/deliverypoints'
     __DELIVERY_COST_URL = '/v2/calculator/tarifflist'
@@ -173,8 +173,8 @@ class CDEK2Client:
 
 #
 
-# Создаем экземпляр класса
-client = CDEK2Client(client_id="EMscd6r9JnFiQ3bLoyjJY6eM78JrJceI", client_secret="PjLZkKBHEiLK3YsjtNrt3TGNG0ahs3kG")
+
+client = CDEK2Client(client_id="R7R9cfqq0ua0pKxlDb3bSVUvtEIzer9J", client_secret="P85B26JBZE7YmifsrKlU4DSKn2RVHpU4")
 
 # # Замените коды городов на нужные значения
 # sender_city_code = 11

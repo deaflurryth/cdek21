@@ -44,15 +44,3 @@ def calc_cost_delivery(data: FormCalc):
     return response
 
 
-@calculator_cdek.get('/fsdaf')
-async def get_cdek_cities():
-    url = "https://api.edu.cdek.ru/v2/location/cities"
-
-    async with httpx.AsyncClient() as client:
-        response = await client.get(url)
-
-        if response.status_code == 200:
-            cities_data = response.json()
-            return cities_data
-        else:
-            return None
