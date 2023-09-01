@@ -1,7 +1,7 @@
 import httpx
 from fastapi import APIRouter
 
-from app.endpoints.cdek_calc.utils import client, dict_city_code
+from app.endpoints.cdek_calc.utils import client, dict_city_code, CDEK2Client
 from pydantic import BaseModel
 from pydantic.class_validators import Optional
 
@@ -29,6 +29,7 @@ class FormCalc(BaseModel):
 def calc_cost_delivery(data: FormCalc):
     sender_city_code = dict_city_code[data.sender_city_code.title()]
     receiver_city_code = dict_city_code[data.receiver_city_code.title()]
+    client = CDEK2Client(client_id="R7R9cfqq0ua0pKxlDb3bSVUvtEIzer9J", client_secret="P85B26JBZE7YmifsrKlU4DSKn2RVHpU4")
     goods = [
         {
             'weight': 10,
