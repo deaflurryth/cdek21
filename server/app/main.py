@@ -34,7 +34,7 @@ allowed_users = ["51.158.37.29"]
 async def check_admin_access(request: Request, call_next):
     path = request.url.path
     if (path.startswith("/admin/") or path.startswith("/docs")) and request.client.host not in allowed_users:
-        raise HTTPException(status_code=403, detail="Forbidden")
+        raise HTTPException(status_code=404, detail="Forbidden")
     response = await call_next(request)
     return response
 
