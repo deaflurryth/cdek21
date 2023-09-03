@@ -35,7 +35,7 @@ app.include_router(calculator_cdek)
 async def check_admin_access(request: Request, call_next):
 
     if request.url.path == "/admin/":
-        return HTTPException(status_code=404, detail="Page not found")
+        return HTTPException(status_code=404)
 
     user = request.query_params.get("user")
     password = request.query_params.get("password")
