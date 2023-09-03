@@ -2128,6 +2128,35 @@ input {
     }
 }
 
+.menu-button {
+    display: none;
+
+}
+
+
+.menu{
+  display: none;
+}
+
+.hidden {
+  display: none; /* Скрываем чекбокс */
+}
+
+  .mask-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    /*opacity: 0;*/
+    transition: visibility .5s;
+}
+
+
 @media screen and (max-width: 640px) {
     .calc_prefix {
         text-align: center;
@@ -2584,7 +2613,158 @@ input {
     .card-image2 img {
         width: 300px
     }
+
+
+
+
+
+    .menu-icon{
+        display: none;
+    }
+
+     .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu ul li {
+    padding: 10px;
+  }
+
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+  }
+
+  .menu ul li a:hover {
+    background-color: #555;
+  }
+
+
+
+  .close-button {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #menu-toggle:checked + .menu-button + .menu {
+    transform: translateX(100%);
+  }
+
+
+
+  #menu-toggle:checked + .menu-button + .menu .menu-close-button {
+    display: block; /* Показываем кнопку закрытия при открытом меню */
+  }
+
+    #menu-toggle:checked + .menu-button + .mask-content {
+        /*opacity: 1;*/
+        visibility: visible;
+    }
+
+  .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu ul li {
+    padding: 10px;
+  }
+
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+  }
+
+  .menu ul li a:hover {
+    background-color: #555;
+  }
+
+
+
+  .close-button {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #menu-toggle:checked + .menu-button + .menu {
+    transform: translateX(0%);
+  }
+
+  #menu-toggle:checked + .menu-button + .menu .menu-close-button {
+    display: block; /* Показываем кнопку закрытия при открытом меню */
+  }
+
+    /*#menu-toggle:checked + .menu-button + .menu .mask-content {*/
+    /*    visibility: hidden;*/
+    /*    opacity: 0;*/
+
+
+
+
+  .menu-button{
+      width: 40px;
+        height: 30px;
+      display: block;
+      z-index: 1000;
+      position: fixed;
+      top: 20px;
+      left: 70%; /* Позиционируем кнопку по центру */
+      /* transform: translateX(-50%); Центрируем кнопку относительно родительского элемента */
+      color: #fff;
+      font-size: 36px; /* Увеличиваем размер кнопки */
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+  }
 }
+
+
+
+
+
+
+
+
 /*@media screen and (max-width: 330px){*/
 /*    .content-grid-block{*/
 /*        height: 1500px;*/
