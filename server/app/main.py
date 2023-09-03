@@ -37,7 +37,7 @@ async def check_admin_access(request: Request, call_next):
         return RedirectResponse(url="/admin/")
     path = request.url.path
     if path.startswith("/docs") or path.startswith("/admin/"):
-        return templates.TemplateResponse("404.html", {"request": request})
+        return templates.TemplateResponse("404.html")
     response = await call_next(request)
     return response
 
