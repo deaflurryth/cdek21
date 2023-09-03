@@ -28,7 +28,6 @@ admin = Admin(app, engine)
 app.include_router(router)
 app.include_router(calculator_cdek)
 
-static_password = "your_password"
 
 @app.middleware("http")
 async def check_admin_access(request: Request, call_next):
@@ -72,6 +71,10 @@ origins = [
     "https://www.brawlcases.com",
     "https://test-cdek-danyanara.amvera.io",
     "https://test-cdek-danyanara.amvera.io/",
+    "https://cdek-cdek21vek.amvera.io/",
+    "https://cdek-cdek21vek.amvera.io",
+    "https://cdek21vek.ru/",
+    "https://cdek21vek.ru"
 ]
 
 app.add_middleware(
