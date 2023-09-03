@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         formData.goods = goodsData;
         console.log(data)
-        fetch('https://test-cdek-danyanara.amvera.io/cdek_calc', {
+        fetch('https://cdek21vek.ru/cdek_calc', {
             method: "POST",
             credentials: "include",
             body: JSON.stringify(formData),

@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = nameInput.value;
     const phoneNumber = phoneNumberInput.value;
 
-    const url = "https://test-cdek-danyanara.amvera.io/report/dashboard";
+    const url = "https://cdek21vek.ru/report/dashboard";
     const data = {
       name: name,
       phone: phoneNumber
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = nameInput.value;
     const phoneNumber = phoneNumberInput.value;
     const shorterInfo = infoInput.value;
-    const url = "https://test-cdek-danyanara.amvera.io/report/dashboard";
+    const url = "https://cdek21vek.ru/report/dashboard";
     const data = {
       name: name,
       phone: phoneNumber,
