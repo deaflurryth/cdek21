@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import engine
@@ -11,14 +11,32 @@ from fastapi.requests import Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
+async def not_found_error(request: Request, exc: HTTPException):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+
+exception_handlers = {404: not_found_error}
+
 app = FastAPI(
-    title="Cdek 21"
+    title="Cdek 21",
+    exception_handlers = exception_handlers,
 )
 admin = Admin(app, engine)
 app.include_router(router)
 app.include_router(calculator_cdek)
 
 
+
+allowed_users = ["51.158.37.29"]
+
+
+@app.middleware("http")
+async def check_admin_access(request: Request, call_next):
+    path = request.url.path
+    if (path.startswith("/admin/") or path.startswith("/docs")) and request.client.host not in allowed_users:
+        raise HTTPException(status_code=403, detail="Forbidden")
+    response = await call_next(request)
+    return response
 
 class Email_formAdmin(ModelView, model=Email_form):
     column_list = [Email_form.id, Email_form.name, Email_form.phone, Email_form.description]
