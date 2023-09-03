@@ -8,7 +8,7 @@ from app.endpoints.cdek_calc.rout import calculator_cdek
 from app.endpoints.email_form.router import router
 from app.endpoints.email_form.models import Email_form
 from sqladmin import ModelView, Admin
-from fastapi.responses import Response
+from fastapi.responses import Response, RedirectResponse
 from fastapi.requests import Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -32,18 +32,14 @@ static_password = "your_password"
 
 @app.middleware("http")
 async def check_admin_access(request: Request, call_next):
-    response = await call_next(request)
+    user = request.query_params.get("user")
+    password = request.query_params.get("password")
+    if user == "cdek21" and password == "cdek21password":
+        return RedirectResponse(url="/admin/")
     path = request.url.path
-    client_ip = request.client.host
-    print(client_ip)
-
-    if path.startswith("/admin/"):
-        parts = path.split("/")
-        if len(parts) == 3 and parts[1] == "admin":
-            user = parts[2]
-            password = request.query_params.get("password", "")
-            if user == "cdek21" and password == static_password:
-                return response
+    if path.startswith("/docs"):
+        return templates.TemplateResponse("404.html", {"request": request})
+    response = await call_next(request)
     return response
 
 
