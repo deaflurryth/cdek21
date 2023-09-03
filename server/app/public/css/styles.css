@@ -1287,7 +1287,7 @@ input {
 
 .grid-container_t {
     display: grid;
-    grid-template-columns: repeat(4, 150px);
+    grid-template-columns: repeat(4, 240px);
     grid-template-rows: repeat(13, 80px);
     gap: 20px; /* Пространство между ячейками */
     /*height: 500px; !* Высота блока *!*/
@@ -1404,6 +1404,43 @@ input {
     color: #323232;
 }
 
+@media screen and (max-width: 640px) {
+    .grid_title_header {
+        font-size: 8pt !important;
+    }
+
+    .grid_title_header_sub {
+        font-size: 9pt !important;
+    }
+
+    .grid_item_text {
+        font-size: 10pt !important;
+    }
+
+    .grid-container_t {
+        grid-template-columns: repeat(4, 80px) !important;
+        grid-template-rows: repeat(13, 80px) !important;
+    }
+
+    .grid-item_t {
+        width: 75px !important;
+    }
+
+    .none_circle {
+        width: 10px;
+        height: 10px;
+    }
+
+    .yes_circle {
+        width: 10px;
+        height: 10px;
+    }
+
+    .recallme_button_grid_d {
+        border-radius: 25px !important;
+    }
+}
+
 /*@media screen and (max-width: 1440px) {*/
 /*    .stages_h2_title {*/
 /*        font-size: 12pt;*/
@@ -1507,24 +1544,58 @@ input {
 }
 
 .int-about-card{
-  font-family: 'Oswald', sans-serif;
-  font-size: 60px;
-  font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    font-weight: 200;
     /*font-size: 72px;*/
-  background: -webkit-linear-gradient(#52B250, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  padding-top: 30px;
-  /*position: absolute;*/
+    background: -webkit-linear-gradient(#52B250, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 30px;
+    /*position: absolute;*/
 }
 
-.txt-about-card{
-  font-family: 'Oswald', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  color: #333;
-  /*padding-top: 20px;*/
-  padding: 10px 10px 0 10px;
+@media screen and (max-width: 640px) {
+    .about-comp_wrapper {
+        padding: 30px 30px 0px 0px !important;
+    }
+
+    .about-comp-container {
+        padding: 0px 15px 0px 15px !important;
+        width: 100% !important;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .about-comp-card-txt {
+        width: 150px !important;
+        height: 110px !important;
+        border-radius: 25px !important;
+    }
+
+    .about-comp-cards-right {
+        margin-left: 20px;
+    }
+
+    .int-about-card {
+        font-size: 30px !important;
+        padding-top: 15px !important;
+    }
+
+    .txt-about-card {
+        padding: 0px 0px 0 0px !important;
+    }
+}
+
+
+.txt-about-card {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+    /*padding-top: 20px;*/
+    padding: 10px 10px 0 10px;
 }
 .why_us_section {
   margin-top: 100px;
@@ -1575,6 +1646,22 @@ input {
         box-shadow: 0 5px 1px rgba(0, 179, 61, 0.4);
     }
 }
+
+@media screen and (max-width: 640px) {
+    .content-grid-block-downst {
+        grid-template-rows: repeat(2, 200px) !important;
+        grid-template-columns: repeat(3, 100px) !important;
+    }
+
+    .content-grid-h1 {
+        font-size: 9pt !important;
+    }
+
+    h1 {
+        font-size: 24pt;
+    }
+}
+
 
 .slider_main_wrap {
     display: flex;
@@ -2041,6 +2128,83 @@ input {
     }
 }
 
+@media screen and (max-width: 640px) {
+    .calc_prefix {
+        text-align: center;
+    }
+
+    .form_calc {
+        z-index: 2;
+    }
+
+    .calc_inputs label {
+        font-size: 10pt;
+    }
+
+    .calc_input {
+        width: 150px;
+    }
+
+    .calc_input_trio {
+        width: 50px !important;
+    }
+
+    .form_calc input {
+        font-size: 12pt;
+    }
+
+    #box1 {
+        z-index: 1;
+        width: 80px;
+        height: 80px;
+    }
+
+    .calc_get_price {
+        z-index: 2;
+        width: 180px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .text_column_info {
+        font-size: 12pt;
+    }
+
+    .column_price {
+        font-size: 14pt;
+    }
+
+    .title_column {
+        font-size: 12pt !important;
+    }
+
+    .calc_info_plette {
+        grid-template-rows: repeat(2, 200px);
+        grid-template-columns: repeat(2, 150px);
+    }
+
+    .calc_info_cel {
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .fa-warehouse {
+        font-size: 25px !important;
+    }
+
+    .fa-arrow-right {
+        font-size: 25px !important;
+    }
+
+    .fa-door-open {
+        font-size: 25px !important;
+    }
+
+    .content-grid-h1 {
+        font-size: 9pt !important;
+    }
+}
+
 
 .privacy_wrapper {
     max-width: 100%;
@@ -2180,8 +2344,10 @@ input {
     margin-right: 60vw;
 }
 
-.grid-container_t{
+.grid-container_t {
     gap: 5px;
+    grid-template-columns: repeat(4, 180px);
+    grid-template-rows: repeat(13, 80px);
 }
 
 .grid-item_t{
@@ -2361,13 +2527,64 @@ input {
         left: 25vw;
     }
 
-    .step_recall_button{
+    .step_recall_button {
         width: 27vw;
         height: 7vw;
         font-size: 2.3vw;
     }
 }
 
+.page_404_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 88vh;
+    justify-content: center;
+}
+
+.error_404_title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 800;
+    color: #222222;
+    font-size: 80px;
+}
+
+.error_404_subtitle {
+    font-family: "Oswald", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: #222222;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .error_404_title {
+        font-size: 60px;
+    }
+
+    .error_404_subtitle {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .popup {
+        width: 80%;
+    }
+
+    .card-image img {
+        width: 300px
+    }
+
+    .popup2 {
+        width: 80%;
+    }
+
+    .card-image2 img {
+        width: 300px
+    }
+}
 /*@media screen and (max-width: 330px){*/
 /*    .content-grid-block{*/
 /*        height: 1500px;*/
