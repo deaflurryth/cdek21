@@ -37,6 +37,10 @@ async def check_admin_access(request: Request, call_next):
     password = request.query_params.get("password")
     if user == "cdek21" and password == "cdek21password":
         return RedirectResponse(url="/admin/")
+
+    if request.url.path == "/admin/":
+        return templates.TemplateResponse("404.html", {"request": request})
+
     response = await call_next(request)
     return response
 
