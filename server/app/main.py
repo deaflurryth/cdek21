@@ -15,8 +15,6 @@ from fastapi.templating import Jinja2Templates
 
 
 async def not_found_error(request: Request, exc: HTTPException):
-    if request.url.path == "/admin/":
-        return templates.TemplateResponse("404.html", {"request": request})
     return templates.TemplateResponse("404.html", {"request": request})
 
 
@@ -26,6 +24,8 @@ app = FastAPI(
     title="Cdek 21",
     exception_handlers=exception_handlers,
 )
+templates = Jinja2Templates(directory="app/public/")
+app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
 admin = Admin(app, engine)
 app.include_router(router)
 app.include_router(calculator_cdek)
@@ -51,8 +51,7 @@ class Email_formAdmin(ModelView, model=Email_form):
 
 admin.add_view(Email_formAdmin)
 
-templates = Jinja2Templates(directory="app/public/")
-app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
+
 
 
 @app.get("/")
