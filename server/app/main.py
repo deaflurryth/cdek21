@@ -28,24 +28,23 @@ admin = Admin(app, engine)
 app.include_router(router)
 app.include_router(calculator_cdek)
 
-allowed_users = ["51.158.37.29/32"]
+static_password = "your_password"
 
 @app.middleware("http")
 async def check_admin_access(request: Request, call_next):
+    response = await call_next(request)
     path = request.url.path
     client_ip = request.client.host
     print(client_ip)
-    if (path.startswith("/admin/") or path.startswith("/docs")) and not is_ip_in_allowed_list(client_ip):
-        return templates.TemplateResponse("404.html", {"request": request})
-    response = await call_next(request)
+
+    if path.startswith("/admin/"):
+        parts = path.split("/")
+        if len(parts) == 3 and parts[1] == "admin":
+            user = parts[2]
+            password = request.query_params.get("password", "")
+            if user == "cdek21" and password == static_password:
+                return response
     return response
-
-
-def is_ip_in_allowed_list(ip):
-    for allowed_ip in allowed_users:
-        if ipaddress.ip_address(ip) in ipaddress.ip_network(allowed_ip, strict=False):
-            return True
-    return False
 
 
 class Email_formAdmin(ModelView, model=Email_form):
