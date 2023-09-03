@@ -27,7 +27,7 @@ app.include_router(calculator_cdek)
 
 
 
-allowed_users = ["51.158.37.29"]
+allowed_users = ["51.158.37.29/32"]
 
 
 @app.middleware("http")
