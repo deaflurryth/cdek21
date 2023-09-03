@@ -34,14 +34,14 @@ async def not_found_error(request: Request, exc: HTTPException):
     raise exc
 
 
-templates = Jinja2Templates(directory="app/public/")
-app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
+
 admin = Admin(app, engine)
 app.include_router(router)
 app.include_router(calculator_cdek)
 
 
-
+templates = Jinja2Templates(directory="app/public/")
+app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
 @app.middleware("http")
 async def check_admin_access(request: Request, call_next):
     user = request.query_params.get("user")

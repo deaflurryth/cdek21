@@ -27,6 +27,7 @@ def calc_cost_delivery(data: FormCalc):
     sender_city_code = dict_city_code[data.sender_city_code.title()]
     receiver_city_code = dict_city_code[data.receiver_city_code.title()]
     client = CDEK2Client(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
+    print(sender_city_code)
     goods = [
         {
             'weight': data.goods.weight,
