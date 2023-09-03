@@ -15,6 +15,8 @@ from fastapi.templating import Jinja2Templates
 
 
 async def not_found_error(request: Request, exc: HTTPException):
+    if request.url.path == "/admin/":
+        return templates.TemplateResponse("404.html", {"request": request})
     return templates.TemplateResponse("404.html", {"request": request})
 
 
@@ -35,9 +37,6 @@ async def check_admin_access(request: Request, call_next):
     password = request.query_params.get("password")
     if user == "cdek21" and password == "cdek21password":
         return RedirectResponse(url="/admin/")
-    path = request.url.path
-    if path.startswith("/docs") or path.startswith("/admin/"):
-        return RedirectResponse(url="404.html")
     response = await call_next(request)
     return response
 
