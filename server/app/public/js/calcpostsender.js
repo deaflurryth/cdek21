@@ -70,7 +70,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     const spanElement = document.querySelector('.' + elementClass);
 
                     if (spanElement) {
-                        const tariff = result.tariff_codes.find(tariff => tariff.tariff_name === tariffDescriptions[elementClass]);
+                        const tariff = result.tariff_codes && result.tariff_codes.find(tariff => tariff.tariff_name === tariffDescriptions[elementClass]);
+
 
                         if (tariff) {
                             const deliverySum = tariff.delivery_sum;
