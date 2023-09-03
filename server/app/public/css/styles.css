@@ -527,7 +527,7 @@ footer {
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
   text-align: center; /* Добавлено */
@@ -725,7 +725,7 @@ input {
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 30%;
+  width: 50%;
   position: relative;
   transition: all 5s ease-in-out;
   text-align: center; /* Добавлено */
@@ -877,7 +877,6 @@ input {
   transform: translateY(-1.5rem);
   color: #00B33D;
 }
-
 
 
 
@@ -1288,7 +1287,7 @@ input {
 
 .grid-container_t {
     display: grid;
-    grid-template-columns: repeat(4, 280px);
+    grid-template-columns: repeat(4, 150px);
     grid-template-rows: repeat(13, 80px);
     gap: 20px; /* Пространство между ячейками */
     /*height: 500px; !* Высота блока *!*/
@@ -2095,6 +2094,10 @@ input {
     padding-bottom: 30px;
 }
 
+.fa-paper-plane, .fa-code, .fa-ruble-sign, .fa-envelope, .fa-warehouse, .fa-money-bill-wave, .fa-shopping-bag, .fa-mobile-alt{
+    font-size: 40px;
+}
+
 
 
 /* ===== Scrollbar CSS ===== */
@@ -2260,5 +2263,114 @@ input {
 
 @media screen and (max-width: 640px){
 
+
+    .left-content-banner{
+        width: 90%;
+    }
+
+    .content-wrapper{
+        padding: 100px 20px 0px 20px;
+    }
+
+    .menu-up{
+        display: none;
+    }
+
+    .content-banner{
+        justify-content: center;
+    }
+
+    .banner_h1_text .banner_h2_text{
+        font-size: 17pt;
+    }
+
+    .callback-bt{
+        display: none;
+    }
+
+    .recallme_button, .feedback_button{
+        font-size: 2.6vw;
+    }
+
+    .f-up{
+        font-size: 7vw;
+    }
+
+    .grid-item{
+        width: 24.4vw;
+        height: 37vw;
+        padding: 3vw 2vw 2vw 2vw;
+    }
+    .content-grid-h1{
+        font-size: 3vw;
+    }
+    .content-grid-h2{
+        font-size: 3vw;
+    }
+    .content-grid-block{
+        padding-top: 50px;
+        /*row-gap: 10px;*/
+        height: 210vw;
+    }
+
+    .stages_wrapper{
+        margin-top: 0px;
+        padding: 10px;
+    }
+
+    .Kak-prois{
+        font-size: 7vw;
+    }
+
+    .stages_h2_title{
+        font-size: 4vw;
+    }
+
+    .step{
+        margin-left: 0px;
+        width: 15vw;
+        height: 15vw;
+        left: 9.5vw;
+
+    }
+
+    .progress-container {
+        width: 90vw;
+    }
+
+    .line {
+        position: absolute;
+        margin-left: 0px;
+        left: 8vw;
+    }
+
+    .step-text-info {
+        font-size: 3vw;
+    }
+
+    .step-label{
+       margin-left: 0px;
+        font-size: 6vw;
+        left: 25vw;
+        margin-bottom: 0px;
+    }
+
+    .step-text-block {
+        margin-left: 0px;
+        margin-top: 40vw;
+        left: 25vw;
+    }
+
+    .step_recall_button{
+        width: 27vw;
+        height: 7vw;
+        font-size: 2.3vw;
+    }
 }
+
+/*@media screen and (max-width: 330px){*/
+/*    .content-grid-block{*/
+/*        height: 1500px;*/
+/*    }*/
+/*}*/
 
