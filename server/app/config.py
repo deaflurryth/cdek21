@@ -27,4 +27,7 @@ REDIS_PORT=os.environ.get("REDIS_PORT")
 
 SECRET_AUTH = os.environ.get("SECRET_AUTH")
 
+CLIENT_ID = os.environ.get("CLIENT_ID")
+CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
+
 
