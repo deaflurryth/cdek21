@@ -34,6 +34,7 @@ allowed_users = ["51.158.37.29/32"]
 async def check_admin_access(request: Request, call_next):
     path = request.url.path
     client_ip = request.client.host
+    print(client_ip)
     if (path.startswith("/admin/") or path.startswith("/docs")) and not is_ip_in_allowed_list(client_ip):
         return templates.TemplateResponse("404.html", {"request": request})
     response = await call_next(request)
