@@ -27,6 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log("длина ", length)
         console.log("ширина ", width)
         console.log("высота ", height)
+        const successIcon = document.createElement('span');
+        successIcon.textContent = 'ПОСЧИТАНО ✓';
+        calcButton.textContent = '';
+        calcButton.appendChild(successIcon);
         const data = {
             sender_city_code: cityFrom,
             receiver_city_code: cityTo,

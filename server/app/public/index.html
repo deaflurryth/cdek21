@@ -15,7 +15,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -24,7 +30,7 @@
         <div id="logo" class="logo">
             <img src="images/cdek-logo.png" alt="CDEK Logo">
         </div>
-        <nav>
+        <nav class="menu-up">
           <ul class="main-menu">
               <li><a href="#calculator">Калькулятор</a></li>
               <li><a href="#tarifs">Тарифы</a></li>
@@ -116,7 +122,7 @@
 
             <div class="input2">
 <!--            <textarea  class="input-field2" required />-->
-                <textarea class="input-field2 short_info_inp" rows="4" required></textarea>
+                <textarea class="input-field2 short_info_inp" required></textarea>
             <label class="input-label2">Ваш запрос</label>
           </div>
 
@@ -170,42 +176,42 @@
     </div>
     <div class="content-grid-block">
         <div class="grid-item">
-            <i class="fas fa-paper-plane green-icon" style="font-size: 40px;"></i>
+            <i class="fas fa-paper-plane green-icon f-up"></i>
             <h1 class="content-grid-h1">ПОДДЕРЖКА 24/7<br> &nbsp;</h1>
             <p class="content-grid-h2">Персональный Менеджер</p>
         </div>
         <div class="grid-item">
-            <i class="fas fa-code green-icon" style="font-size: 40px;"></i>
+            <i class="fas fa-code green-icon f-up"></i>
             <h1 class="content-grid-h1">БЕСПЛАТНАЯ API ИНТЕГРАЦИЯ</h1>
             <p class="content-grid-h2">Позволяет увеличить конверсию Вашего сайта на 40%</p>
         </div>
         <div class="grid-item">
-            <i class="fas fa-ruble-sign green-icon" style="font-size: 40px;"></i>
+            <i class="fas fa-ruble-sign green-icon f-up"></i>
             <h1 class="content-grid-h1">РЕГУЛЯРНЫЙ ВЫВОД НАЛОЖЕННОГО ПЛАТЕЖА</h1>
             <p class="content-grid-h2">Возможны ускоренные перечисления</p>
         </div>
         <div class="grid-item">
-            <i class="fas fa-envelope green-icon" style="font-size: 40px;"></i>
+            <i class="fas fa-envelope green-icon f-up"></i>
             <h1 class="content-grid-h1">БЕСПЛАТНАЯ УПАКОВКА<br> &nbsp;</h1>
             <p class="content-grid-h2">Пакеты А3, А4, конверты А4</p>
         </div>
         <div class="grid-item">
-            <i class="fas fa-warehouse green-icon" style="font-size: 40px;"></i>
+            <i class="fas fa-warehouse green-icon f-up"></i>
             <h1 class="content-grid-h1">БЕСПЛАТНОЕ ХРАНЕНИЕ<br> &nbsp;</h1>
             <p class="content-grid-h2">На пунктах выдачи до 14 дней</p>
         </div>
         <div class="grid-item">
-            <i class="fas fa-money-bill-wave green-icon" style="font-size: 40px;"></i>
+            <i class="fas fa-money-bill-wave green-icon f-up"></i>
             <h1 class="content-grid-h1">БЕСПЛАТНАЯ УСЛУГА<br> &nbsp;</h1>
             <p class="content-grid-h2">Частичный выкуп</p>
         </div>
         <div class="grid-item">
-            <i class="fas fa-shopping-bag green-icon" style="font-size: 40px;"></i>
+            <i class="fas fa-shopping-bag green-icon f-up"></i>
             <h1 class="content-grid-h1">БЕСПЛАТНАЯ УСЛУГА<br> &nbsp;</h1>
             <p class="content-grid-h2">Осмотр вложения и примерка</p>
         </div>
         <div class="grid-item">
-            <i class="fas fa-mobile-alt green-icon" style="font-size: 40px;"></i>
+            <i class="fas fa-mobile-alt green-icon f-up"></i>
             <h1 class="content-grid-h1">ДОСТУПНЫ<br> &nbsp;</h1>
             <p class="content-grid-h2">Личный кабинет и мобильное приложение</p>
         </div>
@@ -213,7 +219,7 @@
 
       <div class="stages_wrapper" id="stages">
           <div class="stages_title">
-              <h1>Как происходит подписание договора?</h1>
+              <h1 class="Kak-prois">Как происходит подписание договора?</h1>
               <h2 class="stages_h2_title">Мы не работаем по «конвейерной системе» и против работы для галочки. <br>
                   Мы стремимся к сотрудничеству, которое <span style="color: #00B33D">помогает каждому</span>,
                   используем все ресурсы для развития наших партнеров.<br>
@@ -224,7 +230,7 @@
               <div class="step active_step">
                   <span class="step-label">Заявка</span>
                 <span class="step-number">1</span>
-                <div class="step-text-block" style="margin-top: 0px;">
+                <div class="step-text-block call">
                     <p class="step-text-info">Звоните нам
                         <br>
                         <a href="tel:+79266071482"
@@ -243,7 +249,7 @@
             <div class="step">
                 <span class="step-label">Знакомство</span>
                 <span class="step-number">2</span>
-                <div class="step-text-block" style="margin-top:-10px;">
+                <div class="step-text-block intro">
                     <p class="step-text-info">Обсуждаем детали сотрудничества</p>
                     <p class="step-text-info">Высылаем Вам шаблон договора, расчеты<br> и прочую информацию</p>
                 </div>
@@ -251,7 +257,7 @@
             <div class="step">
                 <span class="step-label">Подписание договора</span>
                 <span class="step-number">3</span>
-                <div class="step-text-block" style="margin-top:-10px;">
+                <div class="step-text-block intro">
                     <p class="step-text-info">Вы присылаете реквизиты</p>
                     <p class="step-text-info">Создаем договор и подписываем его</p>
                 </div>
@@ -260,7 +266,7 @@
             <div class="step">
                 <span class="step-label">Начало работы</span>
                 <span class="step-number">4</span>
-                <div class="step-text-block" style="margin-top:-10px;">
+                <div class="step-text-block intro">
                     <p class="step-text-info">Тестовые отправки</p>
                     <p class="step-text-info">Обучение работы в личном кабинете</p>
                 </div>
@@ -299,9 +305,9 @@
                       <div class="calc_inputs">
                           <label for="calc_input1">Город отправителя:</label>
                           <input type="text" id="calc_input1" class="calc_input" required style="padding-left: 20px;
-                               color: #595959; transition: color 0.3s;"
+                               color: #222222; transition: color 0.3s;"
                                  onfocus="if(this.value==='Москва') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
-                                 onblur="if(this.value==='') { this.value='Москва'; this.style.opacity = 0.7; this.style.color = '#595959'; } else this.style.opacity = 1;"
+                                 onblur="if(this.value==='') { this.value='Москва'; this.style.opacity = 0.9; this.style.color = '#222222'; } else this.style.opacity = 1;"
                                  value="Москва"/>
 
                       </div>
@@ -309,35 +315,35 @@
                     <div class="calc_inputs">
                         <label for="calc_input2">Город получателя:</label>
                         <input type="text" id="calc_input2" class="calc_input" required style="padding-left: 20px;
-                               color: #595959; transition: color 0.3s;"
+                               color: #222222; transition: color 0.3s;"
                                onfocus="if(this.value==='Санкт-Петербург') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
-                               onblur="if(this.value==='') { this.value='Санкт-Петербург'; this.style.opacity = 0.7; this.style.color = '#595959'; } else this.style.opacity = 1;"
+                               onblur="if(this.value==='') { this.value='Санкт-Петербург'; this.style.opacity = 0.9; this.style.color = '#222222'; } else this.style.opacity = 1;"
                                value="Санкт-Петербург"/>
                     </div>
                     <div class="calc_inputs">
                         <label for="calc_input3">Вес (в кг):</label>
                         <input type="number" id="calc_input3" class="calc_input" required style="padding-left: 20px;
-                               color: #595959; transition: color 0.3s;"
+                               color: #222222; transition: color 0.3s;"
                                onfocus="if(this.value==='10') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
-                               onblur="if(this.value==='') { this.value='10'; this.style.opacity = 0.7; this.style.color = '#595959'; } else this.style.opacity = 1;"
+                               onblur="if(this.value==='') { this.value='10'; this.style.opacity = 0.9; this.style.color = '#222222'; } else this.style.opacity = 1;"
                                value="10"/>
                     </div>
                     <div class="calc_inputs">
                         <label for="calc_input4">Габариты:</label>
                         <input type="number" id="calc_input4" class="calc_input_trio" required style="padding-left: 20px;
-                               color: #595959; transition: color 0.3s;"
+                               color: #222222; transition: color 0.3s;"
                                onfocus="if(this.value==='30') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
-                               onblur="if(this.value==='') { this.value='30'; this.style.opacity = 0.7; this.style.color = '#595959'; } else this.style.opacity = 1;"
+                               onblur="if(this.value==='') { this.value='30'; this.style.opacity = 0.9; this.style.color = '#222222'; } else this.style.opacity = 1;"
                                value="30"/>
                         <input type="number" id="calc_input5" class="calc_input_trio" required style="padding-left: 20px;
-                               color: #595959; transition: color 0.3s;"
+                               color: #222222; transition: color 0.3s;"
                                onfocus="if(this.value==='20') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
-                               onblur="if(this.value==='') { this.value='20'; this.style.opacity = 0.7; this.style.color = '#595959'; } else this.style.opacity = 1;"
+                               onblur="if(this.value==='') { this.value='20'; this.style.opacity = 0.9; this.style.color = '#222222'; } else this.style.opacity = 1;"
                                value="20"/>
                         <input type="number" id="calc_input6" class="calc_input_trio" required style="padding-left: 20px;
-                               color: #595959; transition: color 0.3s;"
+                               color: #222222; transition: color 0.3s;"
                                onfocus="if(this.value==='5') { this.value=''; this.style.opacity = 1; this.style.color = '#22222'; }"
-                               onblur="if(this.value==='') { this.value='5'; this.style.opacity = 0.7; this.style.color = '#595959'; } else this.style.opacity = 1;"
+                               onblur="if(this.value==='') { this.value='5'; this.style.opacity = 0.9; this.style.color = '#222222'; } else this.style.opacity = 1;"
                                value="5"/>
                     </div>
                   </form>
@@ -400,7 +406,7 @@
                       </div>
                   </div>
                   <div class="first_row">
-                      <span class="title_column" style="font-size: 20pt;">Международный экспресс <br> документы</span>
+                      <span class="title_column"">Международный экспресс <br> документы</span>
                       <div class="info_column">
                           <span class="text_column_info">дверь → дверь</span>
                       </div>
@@ -409,7 +415,7 @@
                       </div>
                   </div>
                   <div class="first_row">
-                      <span class="title_column back_white secret_border_left" style="font-size: 20pt;">Международный экспресс <br>грузы</span>
+                      <span class="title_column back_white secret_border_left" ">Международный экспресс <br>грузы</span>
                       <div class="info_column">
                           <span class="text_column_info">дверь → дверь</span>
                       </div>
@@ -585,6 +591,7 @@
             </div>
 
         </div>
+      </div>
           <div class="why_us_section" id="whyagree">
               <div class="stages_title">
                   <h1>Почему нам доверяют</h1>
@@ -640,7 +647,7 @@
         <div class="down_info_wrapper" id="contacts"
              style="border: 2px dashed #00B33D; margin-bottom: -60px;  border-radius: 50px 50px 0px 0px;">
             <h1>Где мы находимся</h1>
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A583f9c78e6fb0e3a4ff12d608f73bf3b35fb3870bef9569a4a526505455a4802&amp;width=900&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script>
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A583f9c78e6fb0e3a4ff12d608f73bf3b35fb3870bef9569a4a526505455a4802&amp;width=100%&amp;height=350&amp;lang=ru_RU&amp;scroll=true"></script>
             <div down_info_text style="padding: 20px; gap: 20px;">
                 <p class="phone_us" id="location" style="cursor: pointer;"><i class="fas fa-map-marker-alt"
                                                                               style="font-size: 16pt; margin-right: 20px;"></i>

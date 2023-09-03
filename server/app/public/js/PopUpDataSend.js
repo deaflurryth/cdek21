@@ -15,7 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     console.log("Отправка данных на сервер:", data);
-
+    const successIcon = document.createElement('span');
+    successIcon.textContent = 'Отправлено ✓';
+    sendButton.textContent = '';
+    sendButton.appendChild(successIcon);
     fetch(url, {
             method: "POST",
             credentials: "include",
@@ -51,7 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     console.log("Отправка данных на сервер:", data);
-
+    const successIcon = document.createElement('span');
+    successIcon.textContent = 'Отправлено ✓';
+    sendButton.textContent = '';
+    sendButton.appendChild(successIcon);
     fetch(url, {
             method: "POST",
             credentials: "include",
