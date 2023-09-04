@@ -1090,6 +1090,7 @@ input {
   font-weight: 600;
   font-size: 16pt;
 }
+
 .content-grid-h2 {
   color: #323232;
   font-family: 'Oswald', sans-serif;
@@ -1288,7 +1289,7 @@ input {
 .grid-container_t {
     display: grid;
     grid-template-columns: repeat(4, 240px);
-    grid-template-rows: repeat(13, 80px);
+    grid-template-rows: repeat(13, 40px);
     gap: 20px; /* Пространство между ячейками */
     /*height: 500px; !* Высота блока *!*/
     /*border: 1px solid #000;*/
@@ -1308,21 +1309,21 @@ input {
 }
 .grid_title_header {
   font-family: "Oswald", sans-serif;
-  font-size: 18pt;
+  font-size: 16pt;
   font-weight: 600;
   color: #323232;
 }
 .grid_title_header_sub {
   background-color: #00B33D;
   font-family: "Oswald", sans-serif;
-  font-size: 18pt;
+  font-size: 14px;
   font-weight: 600;
   color: #fafafa;
 }
 
 .grid_item_text {
   font-family: "Oswald", sans-serif;
-  font-size: 15pt;
+  font-size: 11pt;
   font-weight: 300;
   color: #323232;
 }
@@ -2232,6 +2233,13 @@ input {
     .content-grid-h1 {
         font-size: 9pt !important;
     }
+    .column_price.secret_border.medj_gruz_dver_dver {
+        border: 1px solid #0000;
+    }
+    .
+    .noneborder_bot {
+      border: 1px solid #0000 !important;
+    }
 }
 
 
@@ -2286,7 +2294,26 @@ input {
     font-weight: 300;
     padding-bottom: 30px;
 }
-
+@media screen and (max-width: 640px) {
+    .subtext {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+    }
+    .subtext_2 {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+    }
+    .subtext_3 {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    .for_mobile_style {
+        font-size: 48px !important;
+    }
+}
 .fa-paper-plane, .fa-code, .fa-ruble-sign, .fa-envelope, .fa-warehouse, .fa-money-bill-wave, .fa-shopping-bag, .fa-mobile-alt{
     font-size: 40px;
 }
@@ -2701,7 +2728,7 @@ input {
   }
 
   .menu ul li {
-    padding: 10px;
+    padding: 30px;
   }
 
   .menu ul li a {
@@ -2759,8 +2786,17 @@ input {
 }
 
 
-
-
+.mobile_menu {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 90px !important;
+}
+.menu-close-button {
+    font-size: 32px;
+    color: #fafafa;
+    margin-left: 160px;
+}
 
 
 
