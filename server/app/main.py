@@ -42,20 +42,22 @@ templates = Jinja2Templates(directory="app/public/")
 app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
 
 
+# Пары пользователь-пароль для входа в админку
+admin_credentials = {"cdek21": "cdek21password"}
+
 @app.middleware("http")
 async def check_admin_access(request: Request, call_next):
 
-    user = request.query_params.get("user")
-    password = request.query_params.get("password")
-    if user == "cdek21" and password == "cdek21password":
-        return RedirectResponse(url="/admin/")
-
     if request.url.path == "/admin/":
-        return RedirectResponse(url="/")
+        user = request.query_params.get("user")
+        password = request.query_params.get("password")
 
+        if user in admin_credentials and admin_credentials[user] == password:
+            return await call_next(request)
+        else:
+            return RedirectResponse(url="/")
 
-    response = await call_next(request)
-    return response
+    return await call_next(request)
 
 
 class Email_formAdmin(ModelView, model=Email_form):
