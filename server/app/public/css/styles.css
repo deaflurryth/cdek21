@@ -2057,7 +2057,7 @@ input {
 
 .secret_border_left {
     border-radius: 0px 0px 00px 40px;
-    border-left: 1px solid #00B33D;
+    /*border-left: 1px solid #00B33D;*/
 }
 
 .calc_info_plette {
@@ -2238,7 +2238,10 @@ input {
     }
     .
     .noneborder_bot {
-      border: 1px solid #0000 !important;
+      border-bottom: 1px solid #0000 !important;
+    }
+    .noneborder_bot2 {
+      border-bottom: 1px solid #0000 !important;
     }
 }
 
