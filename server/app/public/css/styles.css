@@ -2236,8 +2236,15 @@ input {
         font-size: 9pt !important;
     }
 
-    .
-
+    .noneborder_bot2{
+        border-bottom: 1px solid #0000;
+    }
+    .noneborder_bot{
+        border-bottom: 1px solid #0000;
+    }
+    .medj_gruz_dver_dver {
+        border-bottom: 1px solid #0000;
+    }
 }
 
 
