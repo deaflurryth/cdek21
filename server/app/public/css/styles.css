@@ -1961,7 +1961,7 @@ input {
 .output_calc_down {
     position: relative;
     z-index: 1;
-    border: 1px solid #00B33D;
+    /*border: 1px solid #00B33D;*/
     height: 1250px;
     margin-top: -50px;
     display: flex;
@@ -2007,6 +2007,7 @@ input {
 }
 
 .overnothing {
+    border: 1px solid #00B33D;
 }
 
 .first_row {
@@ -2049,6 +2050,7 @@ input {
 .back_white {
     background: #fafafa;
     color: #222222;
+    border-left: 1px solid #00B33D;
 }
 
 .secret_border {
@@ -2233,16 +2235,9 @@ input {
     .content-grid-h1 {
         font-size: 9pt !important;
     }
-    .column_price.secret_border.medj_gruz_dver_dver {
-        border: 1px solid #0000;
-    }
+
     .
-    .noneborder_bot {
-      border-bottom: 1px solid #0000 !important;
-    }
-    .noneborder_bot2 {
-      border-bottom: 1px solid #0000 !important;
-    }
+
 }
 
 
