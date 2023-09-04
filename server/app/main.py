@@ -44,12 +44,15 @@ app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
 
 @app.middleware("http")
 async def check_admin_access(request: Request, call_next):
-    if request.url.path == "/admin/":
-        return RedirectResponse(url="/")
+
     user = request.query_params.get("user")
     password = request.query_params.get("password")
     if user == "cdek21" and password == "cdek21password":
         return RedirectResponse(url="/admin/")
+
+    if request.url.path == "/admin/":
+        return RedirectResponse(url="/")
+
 
     response = await call_next(request)
     return response
