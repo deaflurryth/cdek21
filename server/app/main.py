@@ -48,6 +48,9 @@ admin_credentials = {LOGIN: PASSWORD}
 
 @app.middleware("http")
 async def check_admin_access(request: Request, call_next):
+    response = await call_next(request)
+    if request.url.path.startswith("/images/"):
+        response.headers["Cache-Control"] = f"public, max-age=999999"
 
     if request.url.path == "/admin/":
         user = request.query_params.get("user")
@@ -58,7 +61,7 @@ async def check_admin_access(request: Request, call_next):
         else:
             return RedirectResponse(url="/")
 
-    return await call_next(request)
+    return response
 
 
 class Email_formAdmin(ModelView, model=Email_form):
