@@ -21,12 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const length = parseFloat(document.getElementById('calc_input4').value);
         const width = parseFloat(document.getElementById('calc_input5').value);
         const height = parseFloat(document.getElementById('calc_input6').value);
-        console.log("отправитьель ", cityFrom)
-        console.log("получатель ", cityTo)
-        console.log("вес ", weight)
-        console.log("длина ", length)
-        console.log("ширина ", width)
-        console.log("высота ", height)
         const successIcon = document.createElement('span');
         successIcon.textContent = 'ПОСЧИТАНО ✓';
         calcButton.textContent = '';
@@ -52,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         formData.goods = goodsData;
-        console.log(data)
         fetch('https://cdek21vek.ru/cdek_calc', {
             method: "POST",
             credentials: "include",

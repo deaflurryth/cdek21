@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
       phone: phoneNumber
     };
 
-    console.log("Отправка данных на сервер:", data);
     const successIcon = document.createElement('span');
     successIcon.textContent = 'Отправлено ✓';
     sendButton.textContent = '';

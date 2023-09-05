@@ -13,6 +13,7 @@ from fastapi.responses import Response, RedirectResponse
 from fastapi.requests import Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from app.config import LOGIN, PASSWORD
 
 
 async def not_found_error(request: Request, exc: HTTPException):
@@ -42,8 +43,8 @@ templates = Jinja2Templates(directory="app/public/")
 app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
 
 
-# Пары пользователь-пароль для входа в админку
-admin_credentials = {"cdek21": "cdek21password"}
+
+admin_credentials = {LOGIN: PASSWORD}
 
 @app.middleware("http")
 async def check_admin_access(request: Request, call_next):
