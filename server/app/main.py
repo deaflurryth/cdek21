@@ -44,13 +44,10 @@ app.mount("/", StaticFiles(directory="app/public/", html=True), name="static")
 
 
 
-admin_credentials = {LOGIN: PASSWORD}
+admin_credentials = {"cdek21": "cdek21password"}
 
 @app.middleware("http")
 async def check_admin_access(request: Request, call_next):
-    response = await call_next(request)
-    if request.url.path.startswith("/images/"):
-        response.headers["Cache-Control"] = f"public, max-age=999999"
 
     if request.url.path == "/admin/":
         user = request.query_params.get("user")
@@ -61,7 +58,7 @@ async def check_admin_access(request: Request, call_next):
         else:
             return RedirectResponse(url="/")
 
-    return response
+    return await call_next(request)
 
 
 class Email_formAdmin(ModelView, model=Email_form):
