@@ -1090,6 +1090,7 @@ input {
   font-weight: 600;
   font-size: 16pt;
 }
+
 .content-grid-h2 {
   color: #323232;
   font-family: 'Oswald', sans-serif;
@@ -1288,7 +1289,7 @@ input {
 .grid-container_t {
     display: grid;
     grid-template-columns: repeat(4, 240px);
-    grid-template-rows: repeat(13, 80px);
+    grid-template-rows: repeat(13, 40px);
     gap: 20px; /* Пространство между ячейками */
     /*height: 500px; !* Высота блока *!*/
     /*border: 1px solid #000;*/
@@ -1308,21 +1309,21 @@ input {
 }
 .grid_title_header {
   font-family: "Oswald", sans-serif;
-  font-size: 18pt;
+  font-size: 16pt;
   font-weight: 600;
   color: #323232;
 }
 .grid_title_header_sub {
   background-color: #00B33D;
   font-family: "Oswald", sans-serif;
-  font-size: 18pt;
+  font-size: 14px;
   font-weight: 600;
   color: #fafafa;
 }
 
 .grid_item_text {
   font-family: "Oswald", sans-serif;
-  font-size: 15pt;
+  font-size: 11pt;
   font-weight: 300;
   color: #323232;
 }
@@ -1960,7 +1961,7 @@ input {
 .output_calc_down {
     position: relative;
     z-index: 1;
-    border: 1px solid #00B33D;
+    /*border: 1px solid #00B33D;*/
     height: 1250px;
     margin-top: -50px;
     display: flex;
@@ -2006,6 +2007,7 @@ input {
 }
 
 .overnothing {
+    border: 1px solid #00B33D;
 }
 
 .first_row {
@@ -2048,6 +2050,7 @@ input {
 .back_white {
     background: #fafafa;
     color: #222222;
+    border-left: 1px solid #00B33D;
 }
 
 .secret_border {
@@ -2056,7 +2059,7 @@ input {
 
 .secret_border_left {
     border-radius: 0px 0px 00px 40px;
-    border-left: 1px solid #00B33D;
+    /*border-left: 1px solid #00B33D;*/
 }
 
 .calc_info_plette {
@@ -2127,6 +2130,35 @@ input {
         transform: translate(0, -30px) rotate(-10deg);
     }
 }
+
+.menu-button {
+    display: none;
+
+}
+
+
+.menu{
+  display: none;
+}
+
+.hidden {
+  display: none; /* Скрываем чекбокс */
+}
+
+  .mask-content {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+    /*opacity: 0;*/
+    transition: visibility .5s;
+}
+
 
 @media screen and (max-width: 640px) {
     .calc_prefix {
@@ -2257,7 +2289,26 @@ input {
     font-weight: 300;
     padding-bottom: 30px;
 }
-
+@media screen and (max-width: 640px) {
+    .subtext {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+    }
+    .subtext_2 {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 16px;
+    }
+    .subtext_3 {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    .for_mobile_style {
+        font-size: 48px !important;
+    }
+}
 .fa-paper-plane, .fa-code, .fa-ruble-sign, .fa-envelope, .fa-warehouse, .fa-money-bill-wave, .fa-shopping-bag, .fa-mobile-alt{
     font-size: 40px;
 }
@@ -2584,7 +2635,167 @@ input {
     .card-image2 img {
         width: 300px
     }
+
+
+
+
+
+    .menu-icon{
+        display: none;
+    }
+
+     .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu ul li {
+    padding: 10px;
+  }
+
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+  }
+
+  .menu ul li a:hover {
+    background-color: #555;
+  }
+
+
+
+  .close-button {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #menu-toggle:checked + .menu-button + .menu {
+    transform: translateX(100%);
+  }
+
+
+
+  #menu-toggle:checked + .menu-button + .menu .menu-close-button {
+    display: block; /* Показываем кнопку закрытия при открытом меню */
+  }
+
+    #menu-toggle:checked + .menu-button + .mask-content {
+        /*opacity: 1;*/
+        visibility: visible;
+    }
+
+  .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu ul li {
+    padding: 30px;
+  }
+
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+  }
+
+  .menu ul li a:hover {
+    background-color: #555;
+  }
+
+
+
+  .close-button {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  #menu-toggle:checked + .menu-button + .menu {
+    transform: translateX(0%);
+  }
+
+  #menu-toggle:checked + .menu-button + .menu .menu-close-button {
+    display: block; /* Показываем кнопку закрытия при открытом меню */
+  }
+
+    /*#menu-toggle:checked + .menu-button + .menu .mask-content {*/
+    /*    visibility: hidden;*/
+    /*    opacity: 0;*/
+
+
+
+
+  .menu-button{
+      width: 40px;
+        height: 30px;
+      display: block;
+      z-index: 1000;
+      position: fixed;
+      top: 20px;
+      left: 70%; /* Позиционируем кнопку по центру */
+      /* transform: translateX(-50%); Центрируем кнопку относительно родительского элемента */
+      color: #fff;
+      font-size: 36px; /* Увеличиваем размер кнопки */
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+  }
 }
+
+
+.mobile_menu {
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 90px !important;
+}
+.menu-close-button {
+    font-size: 32px;
+    color: #fafafa;
+    margin-left: 160px;
+}
+
+
+
+
 /*@media screen and (max-width: 330px){*/
 /*    .content-grid-block{*/
 /*        height: 1500px;*/

@@ -31,6 +31,11 @@ const recallme_button4 = document.querySelector('.step_recall_button')
 
 const recallme_button3 = document.querySelector('.button_top_grid');
 
+
+const call_burger = document.querySelector('.menu-button');
+
+const mask_content = document.querySelector('.mask-content')
+
 // Закрытие попапа при клике на него или его фон
 popup1.addEventListener('click', (e) => {
   if (e.target === popup1) {
@@ -97,3 +102,9 @@ recallme_button3.addEventListener('click', (e) => {
 recallme_button4.addEventListener('click', (e) => {  e.preventDefault(); // Предотвращаем переход по ссылке
   popup1.style.display = 'flex'; // Отображаем попап
 });
+
+
+// call_burger.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   mask_content.style.visibility = 'visible';
+// });
