@@ -2186,9 +2186,11 @@ input {
     }
 
     #box1 {
-        z-index: 1;
-        width: 80px;
-        height: 80px;
+        display: none;
+    }
+
+    #box2 {
+        display: none;
     }
 
     .calc_get_price {
